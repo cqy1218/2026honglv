@@ -22,36 +22,82 @@ EXCEL_FILE = Path("参考逻辑.xlsx")
 DATA_DIR = Path("data")
 JSON_FILE = DATA_DIR / "scores.json"
 CSV_FILE = DATA_DIR / "scores.csv"
+
 README_FILE = Path("README.md")
 
 
-# 按 Excel “展示”页从左到右的顺序
+# ============================================================
+# 五个比赛组配置
+#
+# name:
+#     GitHub 首页显示名称
+#
+# road_show_id:
+#     比赛 API 对应 ID
+#
+# excel_group:
+#     “参考逻辑.xlsx” → “路演答辩顺序”
+#     中“路演项目组”列对应的准确名称
+#
+# url:
+#     sort_type=2 = 按得分高低顺序
+# ============================================================
+
 GROUPS = [
     {
         "name": "公益1组",
-        "url": "https://itcjspapif.woczx.com/contest-lives/road-show/150?sort_type=2",
+        "road_show_id": 150,
+        "excel_group": "红旅赛道公益组1",
+        "url": (
+            "https://itcjspapif.woczx.com/"
+            "contest-lives/road-show/150?sort_type=2"
+        ),
     },
     {
         "name": "公益2组",
-        "url": "https://itcjspapif.woczx.com/contest-lives/road-show/151?sort_type=2",
+        "road_show_id": 151,
+        "excel_group": "红旅赛道公益组2",
+        "url": (
+            "https://itcjspapif.woczx.com/"
+            "contest-lives/road-show/151?sort_type=2"
+        ),
     },
     {
         "name": "创意1组",
-        "url": "https://itcjspapif.woczx.com/contest-lives/road-show/152?sort_type=2",
+        "road_show_id": 152,
+        "excel_group": "红旅赛道创意组1",
+        "url": (
+            "https://itcjspapif.woczx.com/"
+            "contest-lives/road-show/152?sort_type=2"
+        ),
     },
     {
         "name": "创意2组",
-        "url": "https://itcjspapif.woczx.com/contest-lives/road-show/135?sort_type=2",
+        "road_show_id": 135,
+        "excel_group": "高教主赛道本科生创意组2",
+        "url": (
+            "https://itcjspapif.woczx.com/"
+            "contest-lives/road-show/135?sort_type=2"
+        ),
     },
     {
         "name": "创意3组",
-        "url": "https://itcjspapif.woczx.com/contest-lives/road-show/136?sort_type=2",
+        "road_show_id": 136,
+        "excel_group": "高教主赛道本科生创意组3",
+        "url": (
+            "https://itcjspapif.woczx.com/"
+            "contest-lives/road-show/136?sort_type=2"
+        ),
     },
 ]
 
 
 # ============================================================
-# 模拟网页请求
+# HTTP 请求头
+#
+# 模拟比赛网页本身的请求。
+# 如果以后网站增加 Cookie / Authorization，
+# 可以通过 GitHub Secrets 注入。
 # ============================================================
 
 HEADERS = {
@@ -74,10 +120,19 @@ HEADERS = {
 }
 
 
-# 如果网站以后需要 Cookie / Authorization，
-# 可以放到 GitHub Secrets，不需要写进公开代码
-cookie = os.getenv("WOCZX_COOKIE", "").strip()
-authorization = os.getenv("WOCZX_AUTHORIZATION", "").strip()
+# ============================================================
+# 可选 GitHub Secrets
+# ============================================================
+
+cookie = os.getenv(
+    "WOCZX_COOKIE",
+    "",
+).strip()
+
+authorization = os.getenv(
+    "WOCZX_AUTHORIZATION",
+    "",
+).strip()
 
 if cookie:
     HEADERS["Cookie"] = cookie
@@ -87,50 +142,99 @@ if authorization:
 
 
 # ============================================================
-# 工具函数
+# README 自动更新标记
+# ============================================================
+
+README_START = "<!-- SCOREBOARD_START -->"
+README_END = "<!-- SCOREBOARD_END -->"
+
+
+# ============================================================
+# 通用函数
 # ============================================================
 
 def clean_text(value):
-    """只去除首尾空白，不修改项目名称中的标点等内容。"""
+    """
+    将 Excel / API 中的值转换为字符串，
+    只删除首尾空白，不改变项目名称内容。
+    """
+
     if value is None:
         return ""
+
     return str(value).strip()
 
 
 def rank_number(value):
-    """用于排名排序。"""
+    """
+    将排名转换成整数，用于排序。
+    """
+
     try:
         return int(value)
+
     except (TypeError, ValueError):
         return 999999
 
 
 def format_rank(rank):
-    """将 1 转换成 Excel 里的“第1名”形式。"""
-    if rank in (None, ""):
+    """
+    1 → 第1名
+    2 → 第2名
+    """
+
+    if rank in (
+        None,
+        "",
+    ):
         return ""
+
     return f"第{rank}名"
 
 
 def escape(value):
-    """用于生成安全的 HTML。"""
+    """
+    GitHub README HTML 转义。
+    """
+
     if value is None:
         return ""
-    return html.escape(str(value))
+
+    return html.escape(
+        str(value)
+    )
 
 
 # ============================================================
-# 第一步：读取 Excel 中的“项目名称 → 学校名称”
+# 读取 Excel
+#
+# 核心逻辑：
+#
+# 不再建立
+#
+#     项目名称 → 学校
+#
+# 而是建立
+#
+#     路演项目组 + 答辩顺序
+#                 ↓
+#          项目名称 + 学校
+#
+# 这样不会因为项目名称标点变化造成错配。
 # ============================================================
 
-def load_school_mapping():
+def load_source_mapping():
+
     if not EXCEL_FILE.exists():
+
         raise FileNotFoundError(
-            f"找不到 {EXCEL_FILE}。\n"
-            "请确保“参考逻辑.xlsx”已经上传到 GitHub 仓库根目录。"
+            f"找不到文件：{EXCEL_FILE}\n"
+            "请确保“参考逻辑.xlsx”位于 GitHub 仓库根目录。"
         )
 
-    print(f"正在读取 Excel：{EXCEL_FILE}")
+    print("=" * 70)
+    print(f"读取 Excel：{EXCEL_FILE}")
+    print("=" * 70)
 
     workbook = load_workbook(
         EXCEL_FILE,
@@ -138,188 +242,726 @@ def load_school_mapping():
         data_only=True,
     )
 
-    if "路演答辩顺序" not in workbook.sheetnames:
+    sheet_name = "路演答辩顺序"
+
+    if sheet_name not in workbook.sheetnames:
+
+        workbook.close()
+
         raise RuntimeError(
-            'Excel 中找不到工作表“路演答辩顺序”。'
+            f'Excel 中找不到工作表“{sheet_name}”。'
         )
 
-    sheet = workbook["路演答辩顺序"]
+    sheet = workbook[
+        sheet_name
+    ]
 
     mapping = {}
-    duplicates = []
 
-    # Excel 中：
-    # A列 = 项目名称
-    # B列 = 学校名称
+    duplicate_keys = []
+
+    # --------------------------------------------------------
+    # 当前 Excel 列结构：
     #
-    # 第1行为来源说明
-    # 第2行为标题
-    # 第3行开始是真正的数据
+    # A：项目名称
+    # B：学校名称
+    # C：参赛赛道
+    # D：参赛组别
+    # E：路演项目组
+    # F：答辩顺序
+    #
+    # 第1行为说明
+    # 第2行为表头
+    # 第3行开始为数据
+    # --------------------------------------------------------
+
     for row in sheet.iter_rows(
         min_row=3,
         values_only=True,
     ):
-        project_name = clean_text(row[0])
-        school_name = clean_text(row[1])
 
-        if not project_name:
+        if not row:
             continue
 
-        if (
-            project_name in mapping
-            and mapping[project_name] != school_name
+        project_name = clean_text(
+            row[0]
+        )
+
+        school_name = clean_text(
+            row[1]
+        )
+
+        road_group = clean_text(
+            row[4]
+        )
+
+        road_order_raw = row[5]
+
+        # 缺少关键字段则跳过
+        if not road_group:
+
+            continue
+
+        if road_order_raw in (
+            None,
+            "",
         ):
-            duplicates.append(project_name)
+
             continue
 
-        mapping[project_name] = school_name
+        try:
+
+            road_order = int(
+                road_order_raw
+            )
+
+        except (
+            TypeError,
+            ValueError,
+        ):
+
+            print(
+                "⚠️ 无法识别答辩顺序：",
+                road_group,
+                road_order_raw,
+                project_name,
+            )
+
+            continue
+
+        key = (
+            road_group,
+            road_order,
+        )
+
+        if key in mapping:
+
+            old = mapping[key]
+
+            if (
+                old["project"]
+                != project_name
+                or old["school"]
+                != school_name
+            ):
+
+                duplicate_keys.append(
+                    {
+                        "key": key,
+                        "old": old,
+                        "new": {
+                            "project":
+                                project_name,
+                            "school":
+                                school_name,
+                        },
+                    }
+                )
+
+            continue
+
+        mapping[key] = {
+            "project":
+                project_name,
+
+            "school":
+                school_name,
+        }
 
     workbook.close()
 
-    print(f"已读取 {len(mapping)} 条项目-学校对应关系")
+    print(
+        f"Excel 匹配关系读取完成：{len(mapping)} 条"
+    )
 
-    if duplicates:
+    if duplicate_keys:
+
+        print()
         print(
-            "⚠️ 以下项目名称在 Excel 中存在重复且学校不同：",
-            duplicates,
+            "⚠️ Excel 中发现重复的"
+            "“路演项目组 + 答辩顺序”："
         )
+
+        for item in duplicate_keys:
+
+            print(
+                f"   {item['key']}"
+            )
+
+            print(
+                f"      原：{item['old']}"
+            )
+
+            print(
+                f"      新：{item['new']}"
+            )
+
+    print()
 
     return mapping
 
 
 # ============================================================
-# 第二步：读取比赛 API
+# 读取一个比赛组 API
 # ============================================================
 
-def fetch_group(session, group):
-    group_name = group["name"]
-    url = group["url"]
+def fetch_group(
+    session,
+    group,
+):
 
-    print()
-    print("=" * 60)
-    print(f"读取：{group_name}")
-    print(url)
+    group_name = group[
+        "name"
+    ]
+
+    url = group[
+        "url"
+    ]
+
+    print("=" * 70)
+    print(
+        f"开始读取：{group_name}"
+    )
+    print(
+        f"API：{url}"
+    )
 
     response = session.get(
         url,
         timeout=30,
     )
 
-    print(f"HTTP：{response.status_code}")
+    print(
+        f"HTTP 状态码：{response.status_code}"
+    )
 
     if response.status_code == 401:
+
         raise RuntimeError(
-            f"{group_name} 返回 401 Unauthorized。"
-            "如网站增加登录验证，请配置 GitHub Secrets。"
+            f"{group_name} 返回 401 Unauthorized。\n"
+            "如果网站增加了身份验证，请检查 "
+            "WOCZX_COOKIE / WOCZX_AUTHORIZATION。"
         )
 
     response.raise_for_status()
 
-    data = response.json()
+    try:
 
-    # 核对接口本身报告的小组名称
-    contest_road_show = data.get("contestRoadShow", {}) or {}
-    judge_group = contest_road_show.get("judgeGroup", {}) or {}
-    api_group_name = clean_text(judge_group.get("name"))
+        data = response.json()
+
+    except Exception:
+
+        print(
+            "服务器返回内容不是合法 JSON："
+        )
+
+        print(
+            response.text[:1000]
+        )
+
+        raise
+
+    # --------------------------------------------------------
+    # 输出 API 自己报告的小组名称，方便人工检查
+    # --------------------------------------------------------
+
+    contest_road_show = (
+        data.get(
+            "contestRoadShow",
+            {},
+        )
+        or {}
+    )
+
+    judge_group = (
+        contest_road_show.get(
+            "judgeGroup",
+            {},
+        )
+        or {}
+    )
+
+    api_group_name = clean_text(
+        judge_group.get(
+            "name"
+        )
+    )
 
     if api_group_name:
-        print(f"API 小组名称：{api_group_name}")
 
-        # 比如 Excel 是“创意3组”，API 可能是“本科生创意3组”
-        if group_name not in api_group_name:
-            print(
-                f"⚠️ 注意：配置名称“{group_name}”"
-                f"与 API 返回名称“{api_group_name}”不完全对应。"
-            )
+        print(
+            f"API 返回小组：{api_group_name}"
+        )
 
     return data
 
 
 # ============================================================
-# 第三步：解析项目
+# 解析 API 数据
+#
+# 最关键的匹配方式：
+#
+# Excel：
+#
+#     路演项目组
+#           +
+#       答辩顺序
+#
+# API：
+#
+#     excel_group
+#           +
+#     road_show_sort
+#
+# 两者组合得到唯一匹配。
 # ============================================================
 
-def parse_group(group_name, data, school_mapping):
-    projects = data.get("apply_project", []) or []
+def parse_group(
+    group,
+    data,
+    source_mapping,
+):
+
+    group_name = group[
+        "name"
+    ]
+
+    excel_group = group[
+        "excel_group"
+    ]
+
+    projects = (
+        data.get(
+            "apply_project",
+            [],
+        )
+        or []
+    )
 
     result = []
 
     unmatched = []
 
+    name_mismatches = []
+
+    duplicated_orders = []
+
+    used_orders = set()
+
     for item in projects:
-        project = item.get("project", {}) or {}
 
-        project_name = clean_text(project.get("name"))
+        project = (
+            item.get(
+                "project",
+                {},
+            )
+            or {}
+        )
 
-        # Excel VLOOKUP(FALSE) 的核心逻辑：
-        # 根据项目名称精确查找学校
-        school = school_mapping.get(project_name, "")
+        # ----------------------------------------------------
+        # API 项目名称
+        # ----------------------------------------------------
 
-        if not school:
-            unmatched.append(project_name)
+        api_project_name = clean_text(
+            project.get(
+                "name"
+            )
+        )
+
+        # ----------------------------------------------------
+        # API 路演顺序
+        # ----------------------------------------------------
+
+        road_show_sort_raw = item.get(
+            "road_show_sort",
+            "",
+        )
+
+        try:
+
+            road_show_sort = int(
+                road_show_sort_raw
+            )
+
+        except (
+            TypeError,
+            ValueError,
+        ):
+
+            road_show_sort = None
+
+        # ----------------------------------------------------
+        # 防止 API 出现重复答辩顺序
+        # ----------------------------------------------------
+
+        if road_show_sort is not None:
+
+            if road_show_sort in used_orders:
+
+                duplicated_orders.append(
+                    road_show_sort
+                )
+
+            used_orders.add(
+                road_show_sort
+            )
+
+        # ----------------------------------------------------
+        # 核心匹配
+        # ----------------------------------------------------
+
+        source = None
+
+        if road_show_sort is not None:
+
+            source = source_mapping.get(
+                (
+                    excel_group,
+                    road_show_sort,
+                )
+            )
+
+        # ----------------------------------------------------
+        # 匹配成功
+        # ----------------------------------------------------
+
+        if source:
+
+            school = source[
+                "school"
+            ]
+
+            excel_project_name = source[
+                "project"
+            ]
+
+            # ----------------------------------------------
+            # 项目名称不再作为匹配条件。
+            #
+            # 这里只检查 API 与 Excel 名称是否一致，
+            # 方便发现源数据变动。
+            # ----------------------------------------------
+
+            if (
+                api_project_name
+                and excel_project_name
+                and api_project_name
+                != excel_project_name
+            ):
+
+                name_mismatches.append(
+                    {
+                        "order":
+                            road_show_sort,
+
+                        "api":
+                            api_project_name,
+
+                        "excel":
+                            excel_project_name,
+
+                        "school":
+                            school,
+                    }
+                )
+
+        # ----------------------------------------------------
+        # 匹配失败
+        # ----------------------------------------------------
+
+        else:
+
             school = "⚠️ 未匹配"
 
-        # 优先用网页最终 rank；
-        # 如果没有则使用 group_rank
-        rank = item.get("rank")
+            excel_project_name = ""
 
-        if rank in (None, ""):
-            rank = item.get("group_rank")
+            unmatched.append(
+                {
+                    "order":
+                        road_show_sort_raw,
 
-        score = item.get("grade", "")
+                    "project":
+                        api_project_name,
+                }
+            )
+
+        # ----------------------------------------------------
+        # 排名
+        # ----------------------------------------------------
+
+        rank = item.get(
+            "rank"
+        )
+
+        if rank in (
+            None,
+            "",
+        ):
+
+            rank = item.get(
+                "group_rank"
+            )
+
+        # ----------------------------------------------------
+        # 得分
+        # ----------------------------------------------------
+
+        score = item.get(
+            "grade",
+            "",
+        )
+
+        # ----------------------------------------------------
+        # 加入结果
+        # ----------------------------------------------------
 
         result.append(
             {
-                "group": group_name,
-                "school": school,
-                "project": project_name,
-                "score": score,
-                "rank": rank,
-                "rank_text": format_rank(rank),
-                "road_show_sort": item.get(
-                    "road_show_sort",
-                    "",
-                ),
-                "project_id": item.get(
-                    "project_id",
-                    "",
-                ),
+                "group":
+                    group_name,
+
+                "excel_group":
+                    excel_group,
+
+                "school":
+                    school,
+
+                # 页面始终展示 API 最新名称
+                "project":
+                    api_project_name,
+
+                "excel_project":
+                    excel_project_name,
+
+                "score":
+                    score,
+
+                "rank":
+                    rank,
+
+                "rank_text":
+                    format_rank(
+                        rank
+                    ),
+
+                "road_show_sort":
+                    road_show_sort_raw,
+
+                "project_id":
+                    item.get(
+                        "project_id",
+                        "",
+                    ),
+
+                "school_id":
+                    project.get(
+                        "school_id",
+                        "",
+                    ),
             }
         )
 
-    # 与 Excel“按得分高低顺序”后的显示一致：
-    # 最终以排名顺序排列
+    # --------------------------------------------------------
+    # 按最终排名排序
+    # --------------------------------------------------------
+
     result.sort(
-        key=lambda x: rank_number(x["rank"])
+        key=lambda x:
+        rank_number(
+            x["rank"]
+        )
     )
 
-    if unmatched:
+    # --------------------------------------------------------
+    # 输出校验结果
+    # --------------------------------------------------------
+
+    print(
+        f"{group_name}：读取到 {len(result)} 个项目"
+    )
+
+    print(
+        f"Excel 对应组：{excel_group}"
+    )
+
+    if duplicated_orders:
+
         print()
-        print(f"⚠️ {group_name} 有项目无法在 Excel 中找到学校：")
+        print(
+            f"❌ {group_name} API 中存在重复答辩顺序："
+        )
 
-        for project_name in unmatched:
-            print(f"   - {project_name}")
+        for order in duplicated_orders:
 
-    print(f"{group_name}：读取 {len(result)} 个项目")
+            print(
+                f"   答辩顺序 {order}"
+            )
+
+    if unmatched:
+
+        print()
+        print(
+            f"❌ {group_name} 存在无法匹配学校的项目："
+        )
+
+        for item in unmatched:
+
+            print(
+                f"   答辩顺序：{item['order']}"
+            )
+
+            print(
+                f"   项目名称：{item['project']}"
+            )
+
+    if name_mismatches:
+
+        print()
+        print(
+            f"⚠️ {group_name} "
+            "存在 API 名称与 Excel 名称不一致："
+        )
+
+        for item in name_mismatches:
+
+            print(
+                f"   答辩顺序 {item['order']}"
+            )
+
+            print(
+                f"      API   ：{item['api']}"
+            )
+
+            print(
+                f"      Excel ：{item['excel']}"
+            )
+
+            print(
+                f"      学校  ：{item['school']}"
+            )
+
+    if (
+        not unmatched
+        and not duplicated_orders
+    ):
+
+        print(
+            f"✅ {group_name} 学校匹配正常"
+        )
+
+    print()
 
     return result
 
 
 # ============================================================
-# 第四步：生成 CSV
+# 用于比较本次榜单和上一次榜单
+#
+# 不加入 updated_at，
+# 防止每次运行都因为时间不同产生 commit。
 # ============================================================
 
-def write_csv(groups_data):
-    DATA_DIR.mkdir(exist_ok=True)
+def comparable_data(
+    groups_data,
+):
+
+    return {
+        group_name: [
+            {
+                "school":
+                    row["school"],
+
+                "project":
+                    row["project"],
+
+                "score":
+                    row["score"],
+
+                "rank":
+                    row["rank"],
+
+                "road_show_sort":
+                    row["road_show_sort"],
+
+                "project_id":
+                    row["project_id"],
+            }
+
+            for row in rows
+        ]
+
+        for (
+            group_name,
+            rows,
+        ) in groups_data.items()
+    }
+
+
+# ============================================================
+# 读取上一次保存的数据
+# ============================================================
+
+def load_previous_data():
+
+    if not JSON_FILE.exists():
+
+        return None
+
+    try:
+
+        with JSON_FILE.open(
+            "r",
+            encoding="utf-8",
+        ) as f:
+
+            data = json.load(
+                f
+            )
+
+        if isinstance(
+            data,
+            dict,
+        ):
+
+            return data.get(
+                "groups"
+            )
+
+        return None
+
+    except Exception as exc:
+
+        print(
+            f"⚠️ 无法读取旧 scores.json：{exc}"
+        )
+
+        return None
+
+
+# ============================================================
+# 写 CSV
+# ============================================================
+
+def write_csv(
+    groups_data,
+):
+
+    DATA_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
     fieldnames = [
         "组别",
+        "Excel路演项目组",
         "学校",
         "项目名称",
+        "Excel项目名称",
         "得分",
         "名次",
         "路演顺序",
         "project_id",
+        "school_id",
     ]
 
     with CSV_FILE.open(
@@ -335,36 +977,88 @@ def write_csv(groups_data):
 
         writer.writeheader()
 
-        for group_name, rows in groups_data.items():
+        for (
+            group_name,
+            rows,
+        ) in groups_data.items():
 
             for row in rows:
+
                 writer.writerow(
                     {
-                        "组别": group_name,
-                        "学校": row["school"],
-                        "项目名称": row["project"],
-                        "得分": row["score"],
-                        "名次": row["rank_text"],
-                        "路演顺序": row["road_show_sort"],
-                        "project_id": row["project_id"],
+                        "组别":
+                            group_name,
+
+                        "Excel路演项目组":
+                            row[
+                                "excel_group"
+                            ],
+
+                        "学校":
+                            row[
+                                "school"
+                            ],
+
+                        "项目名称":
+                            row[
+                                "project"
+                            ],
+
+                        "Excel项目名称":
+                            row[
+                                "excel_project"
+                            ],
+
+                        "得分":
+                            row[
+                                "score"
+                            ],
+
+                        "名次":
+                            row[
+                                "rank_text"
+                            ],
+
+                        "路演顺序":
+                            row[
+                                "road_show_sort"
+                            ],
+
+                        "project_id":
+                            row[
+                                "project_id"
+                            ],
+
+                        "school_id":
+                            row[
+                                "school_id"
+                            ],
                     }
                 )
 
 
 # ============================================================
-# 第五步：生成 GitHub 首页榜单
+# 生成 README 首页榜单 HTML
 # ============================================================
 
-def generate_scoreboard_html(groups_data, updated_at):
+def generate_scoreboard_html(
+    groups_data,
+    updated_at,
+):
+
     group_names = [
         group["name"]
         for group in GROUPS
     ]
 
-    # 找到项目最多的小组
     max_rows = max(
-        len(groups_data.get(name, []))
-        for name in group_names
+        len(
+            groups_data.get(
+                group_name,
+                [],
+            )
+        )
+        for group_name in group_names
     )
 
     lines = []
@@ -378,7 +1072,7 @@ def generate_scoreboard_html(groups_data, updated_at):
     )
 
     lines.append(
-        f"<p>最近一次成绩变化：{escape(updated_at)}</p>"
+        f"<p>最近一次数据变化：{escape(updated_at)}</p>"
     )
 
     lines.append(
@@ -386,55 +1080,99 @@ def generate_scoreboard_html(groups_data, updated_at):
     )
 
     lines.append("")
-    lines.append("<table>")
+
+    lines.append(
+        "<table>"
+    )
 
     # --------------------------------------------------------
-    # 第一层表头：五个小组
+    # 第一层表头
     # --------------------------------------------------------
 
-    lines.append("<thead>")
-    lines.append("<tr>")
+    lines.append(
+        "<thead>"
+    )
+
+    lines.append(
+        "<tr>"
+    )
 
     for group_name in group_names:
+
         lines.append(
-            f'<th colspan="4" align="center">'
+            '<th colspan="4" align="center">'
             f"<strong>{escape(group_name)}</strong>"
-            f"</th>"
+            "</th>"
         )
 
-    lines.append("</tr>")
+    lines.append(
+        "</tr>"
+    )
 
     # --------------------------------------------------------
     # 第二层表头
     # --------------------------------------------------------
 
-    lines.append("<tr>")
+    lines.append(
+        "<tr>"
+    )
 
     for _ in group_names:
-        lines.append('<th align="center">学校</th>')
-        lines.append('<th align="center">项目名称</th>')
-        lines.append('<th align="center">得分</th>')
-        lines.append('<th align="center">名次</th>')
 
-    lines.append("</tr>")
-    lines.append("</thead>")
+        lines.append(
+            '<th align="center">学校</th>'
+        )
+
+        lines.append(
+            '<th align="center">项目名称</th>'
+        )
+
+        lines.append(
+            '<th align="center">得分</th>'
+        )
+
+        lines.append(
+            '<th align="center">名次</th>'
+        )
+
+    lines.append(
+        "</tr>"
+    )
+
+    lines.append(
+        "</thead>"
+    )
 
     # --------------------------------------------------------
-    # 数据
+    # 表格正文
     # --------------------------------------------------------
 
-    lines.append("<tbody>")
+    lines.append(
+        "<tbody>"
+    )
 
-    for index in range(max_rows):
+    for index in range(
+        max_rows
+    ):
 
-        lines.append("<tr>")
+        lines.append(
+            "<tr>"
+        )
 
         for group_name in group_names:
 
-            rows = groups_data.get(group_name, [])
+            rows = groups_data.get(
+                group_name,
+                [],
+            )
 
-            if index < len(rows):
-                row = rows[index]
+            if index < len(
+                rows
+            ):
+
+                row = rows[
+                    index
+                ]
 
                 lines.append(
                     f"<td>{escape(row['school'])}</td>"
@@ -445,19 +1183,19 @@ def generate_scoreboard_html(groups_data, updated_at):
                 )
 
                 lines.append(
-                    f'<td align="center">'
+                    '<td align="center">'
                     f"{escape(row['score'])}"
-                    f"</td>"
+                    "</td>"
                 )
 
                 lines.append(
-                    f'<td align="center">'
+                    '<td align="center">'
                     f"<strong>{escape(row['rank_text'])}</strong>"
-                    f"</td>"
+                    "</td>"
                 )
 
             else:
-                # 保持五组横向对齐
+
                 lines.extend(
                     [
                         "<td></td>",
@@ -467,30 +1205,49 @@ def generate_scoreboard_html(groups_data, updated_at):
                     ]
                 )
 
-        lines.append("</tr>")
+        lines.append(
+            "</tr>"
+        )
 
-    lines.append("</tbody>")
-    lines.append("</table>")
-
-    lines.append("")
     lines.append(
-        "> 数据由 GitHub Actions 自动获取；"
-        "学校名称根据仓库根目录 `参考逻辑.xlsx` "
-        "中的“路演答辩顺序”工作表匹配。"
+        "</tbody>"
     )
 
-    return "\n".join(lines)
+    lines.append(
+        "</table>"
+    )
+
+    lines.append("")
+
+    lines.append(
+        "> 成绩由 GitHub Actions 自动读取比赛接口；"
+        "学校信息按照仓库根目录 `参考逻辑.xlsx` "
+        "中的“路演项目组 + 答辩顺序”进行匹配。"
+    )
+
+    return "\n".join(
+        lines
+    )
 
 
 # ============================================================
-# 第六步：只更新 README 中的成绩区域
+# 更新 README
+#
+# 只修改：
+#
+# <!-- SCOREBOARD_START -->
+#
+# ...
+#
+# <!-- SCOREBOARD_END -->
+#
+# 之间的内容。
 # ============================================================
 
-README_START = "<!-- SCOREBOARD_START -->"
-README_END = "<!-- SCOREBOARD_END -->"
+def update_readme(
+    scoreboard_html,
+):
 
-
-def update_readme(scoreboard_html):
     block = (
         f"{README_START}\n"
         f"{scoreboard_html}\n"
@@ -498,10 +1255,13 @@ def update_readme(scoreboard_html):
     )
 
     if README_FILE.exists():
+
         existing = README_FILE.read_text(
-            encoding="utf-8"
+            encoding="utf-8",
         )
+
     else:
+
         existing = (
             "# 江苏大学生创新大赛实时成绩\n"
         )
@@ -512,9 +1272,13 @@ def update_readme(scoreboard_html):
     ):
 
         pattern = re.compile(
-            re.escape(README_START)
+            re.escape(
+                README_START
+            )
             + r".*?"
-            + re.escape(README_END),
+            + re.escape(
+                README_END
+            ),
             re.S,
         )
 
@@ -524,6 +1288,7 @@ def update_readme(scoreboard_html):
         )
 
     else:
+
         new_content = (
             existing.rstrip()
             + "\n\n"
@@ -538,60 +1303,38 @@ def update_readme(scoreboard_html):
 
 
 # ============================================================
-# 第七步：判断榜单有没有变化
-# ============================================================
-
-def comparable_data(groups_data):
-    """
-    去除时间等信息，只比较实际榜单。
-    """
-
-    return {
-        group_name: [
-            {
-                "school": row["school"],
-                "project": row["project"],
-                "score": row["score"],
-                "rank": row["rank"],
-                "road_show_sort": row["road_show_sort"],
-                "project_id": row["project_id"],
-            }
-            for row in rows
-        ]
-        for group_name, rows in groups_data.items()
-    }
-
-
-def load_previous_data():
-    if not JSON_FILE.exists():
-        return None
-
-    try:
-        with JSON_FILE.open(
-            "r",
-            encoding="utf-8",
-        ) as f:
-            data = json.load(f)
-
-        return data.get("groups")
-
-    except Exception:
-        return None
-
-
-# ============================================================
 # 主程序
 # ============================================================
 
 def main():
-    print("=" * 60)
-    print("江苏大学生创新大赛成绩自动更新")
-    print("=" * 60)
 
-    school_mapping = load_school_mapping()
+    print()
+    print("=" * 70)
+    print("江苏大学生创新大赛实时成绩自动更新")
+    print("=" * 70)
+    print()
+
+    # --------------------------------------------------------
+    # 1. 读取 Excel
+    # --------------------------------------------------------
+
+    source_mapping = (
+        load_source_mapping()
+    )
+
+    # --------------------------------------------------------
+    # 2. 创建 HTTP Session
+    # --------------------------------------------------------
 
     session = requests.Session()
-    session.headers.update(HEADERS)
+
+    session.headers.update(
+        HEADERS
+    )
+
+    # --------------------------------------------------------
+    # 3. 读取五个 API
+    # --------------------------------------------------------
 
     groups_data = {}
 
@@ -600,18 +1343,21 @@ def main():
     for group in GROUPS:
 
         try:
-            raw = fetch_group(
+
+            raw_data = fetch_group(
                 session,
                 group,
             )
 
             rows = parse_group(
-                group["name"],
-                raw,
-                school_mapping,
+                group,
+                raw_data,
+                source_mapping,
             )
 
-            groups_data[group["name"]] = rows
+            groups_data[
+                group["name"]
+            ] = rows
 
         except Exception as exc:
 
@@ -624,56 +1370,130 @@ def main():
                 file=sys.stderr,
             )
 
-        # 避免过快访问
-        time.sleep(1)
+        # 避免请求速度过快
+        time.sleep(
+            1
+        )
 
     # --------------------------------------------------------
-    # 为防止某一组接口失败导致首页榜单被清空，
-    # 只要存在读取失败，本轮就直接退出，不覆盖旧榜单。
+    # 4. 任何一个组失败，都不覆盖旧榜单
     # --------------------------------------------------------
 
     if failed_groups:
+
         print()
+        print("=" * 70)
         print(
-            "❌ 以下小组读取失败："
-            + "、".join(failed_groups)
+            "❌ 本次更新失败"
+        )
+        print("=" * 70)
+
+        print(
+            "以下小组读取失败："
+            + "、".join(
+                failed_groups
+            )
         )
 
         print(
-            "为保护已有榜单，本次不更新 README。"
+            "为保护已有成绩，本次不会覆盖 README、CSV、JSON。"
         )
 
-        sys.exit(1)
+        sys.exit(
+            1
+        )
+
+    # --------------------------------------------------------
+    # 5. 检查项目数量
+    # --------------------------------------------------------
+
+    total_projects = sum(
+        len(rows)
+        for rows in groups_data.values()
+    )
+
+    print("=" * 70)
+    print(
+        f"五个小组全部读取成功，共 {total_projects} 个项目"
+    )
+    print("=" * 70)
+    print()
+
+    for group in GROUPS:
+
+        name = group[
+            "name"
+        ]
+
+        print(
+            f"{name}："
+            f"{len(groups_data.get(name, []))} 个项目"
+        )
+
+    print()
+
+    # --------------------------------------------------------
+    # 6. 比较是否发生变化
+    # --------------------------------------------------------
 
     current_data = comparable_data(
         groups_data
     )
 
-    previous_data = load_previous_data()
-
-    # --------------------------------------------------------
-    # 如果实际成绩完全没有变化，就什么都不写
-    # 避免 GitHub 每10分钟制造一个无意义 commit
-    # --------------------------------------------------------
+    previous_data = (
+        load_previous_data()
+    )
 
     if previous_data == current_data:
-        print()
-        print("✅ 榜单与上一次完全一致，无需更新。")
+
+        print("=" * 70)
+        print(
+            "✅ 当前榜单与上一次完全一致"
+        )
+        print(
+            "无需修改 README / CSV / JSON"
+        )
+        print("=" * 70)
+
         return
 
     # --------------------------------------------------------
-    # 有变化才更新时间、README、CSV、JSON
+    # 7. 数据发生变化
     # --------------------------------------------------------
 
     now = datetime.now(
-        ZoneInfo("Asia/Shanghai")
-    ).strftime("%Y-%m-%d %H:%M:%S")
+        ZoneInfo(
+            "Asia/Shanghai"
+        )
+    ).strftime(
+        "%Y-%m-%d %H:%M:%S"
+    )
 
-    DATA_DIR.mkdir(exist_ok=True)
+    print("=" * 70)
+    print(
+        "🔄 检测到榜单变化，开始更新文件"
+    )
+    print(
+        f"更新时间：{now}"
+    )
+    print("=" * 70)
+    print()
+
+    DATA_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    # --------------------------------------------------------
+    # 8. 写 JSON
+    # --------------------------------------------------------
 
     json_payload = {
-        "updated_at": now,
-        "groups": current_data,
+        "updated_at":
+            now,
+
+        "groups":
+            current_data,
     }
 
     with JSON_FILE.open(
@@ -688,24 +1508,53 @@ def main():
             indent=2,
         )
 
-    write_csv(groups_data)
-
-    scoreboard = generate_scoreboard_html(
-        groups_data,
-        now,
+    print(
+        f"✅ 已生成：{JSON_FILE}"
     )
 
-    update_readme(scoreboard)
+    # --------------------------------------------------------
+    # 9. 写 CSV
+    # --------------------------------------------------------
+
+    write_csv(
+        groups_data
+    )
+
+    print(
+        f"✅ 已生成：{CSV_FILE}"
+    )
+
+    # --------------------------------------------------------
+    # 10. 更新 README
+    # --------------------------------------------------------
+
+    scoreboard_html = (
+        generate_scoreboard_html(
+            groups_data,
+            now,
+        )
+    )
+
+    update_readme(
+        scoreboard_html
+    )
+
+    print(
+        f"✅ 已更新：{README_FILE}"
+    )
 
     print()
-    print("=" * 60)
-    print("✅ 榜单发生变化")
-    print("=" * 60)
-    print(f"更新时间：{now}")
-    print(f"JSON：{JSON_FILE}")
-    print(f"CSV：{CSV_FILE}")
-    print(f"首页：{README_FILE}")
+    print("=" * 70)
+    print(
+        "✅ 本次成绩更新完成"
+    )
+    print("=" * 70)
 
+
+# ============================================================
+# 程序入口
+# ============================================================
 
 if __name__ == "__main__":
+
     main()
