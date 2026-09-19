@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19 14:39:06",
+  "updated_at": "2026-09-19 14:50:13",
   "groups": {
     "公益1组": [
       {
@@ -511,9 +511,19 @@
       {
         "road_show_id": 153,
         "school": "南京林业大学",
+        "project": "植此青绿",
+        "score": "86.61",
+        "rank": 1,
+        "road_show_sort": "18",
+        "project_id": "1490",
+        "school_id": "13"
+      },
+      {
+        "road_show_id": 153,
+        "school": "南京林业大学",
         "project": "新疆棉杆有点甜",
         "score": "86.50",
-        "rank": 1,
+        "rank": 2,
         "road_show_sort": "5",
         "project_id": "1499",
         "school_id": "13"
@@ -523,7 +533,7 @@
         "school": "南京大学",
         "project": "一“碳”究“净”——助力乡村生态振兴的养殖废水低碳智能一体化治理方案",
         "score": "86.44",
-        "rank": 2,
+        "rank": 3,
         "road_show_sort": "15",
         "project_id": "1483",
         "school_id": "1"
@@ -533,7 +543,7 @@
         "school": "南京师范大学",
         "project": "苏鲀入粤－－低温全雌河鲀打造苏粤共富新产业",
         "score": "85.79",
-        "rank": 3,
+        "rank": 4,
         "road_show_sort": "12",
         "project_id": "1505",
         "school_id": "23"
@@ -543,7 +553,7 @@
         "school": "南京工业大学",
         "project": "“点废成金”以微膜靶向堆肥技术筑牢乡村绿色共富路",
         "score": "85.57",
-        "rank": 4,
+        "rank": 5,
         "road_show_sort": "3",
         "project_id": "1491",
         "school_id": "8"
@@ -553,7 +563,7 @@
         "school": "南京农业大学",
         "project": "同甘共济——打造凝“芯”聚力致富路",
         "score": "85.19",
-        "rank": 5,
+        "rank": 6,
         "road_show_sort": "16",
         "project_id": "1481",
         "school_id": "18"
@@ -563,7 +573,7 @@
         "school": "南京理工大学",
         "project": "炭循新生-以农业固废炭化新模 式，点亮乡村绿色固碳新经济",
         "score": "84.53",
-        "rank": 6,
+        "rank": 7,
         "road_show_sort": "2",
         "project_id": "1498",
         "school_id": "5"
@@ -573,7 +583,7 @@
         "school": "苏州大学",
         "project": "融灰成器——沿黄老工业城市粉煤灰治理转型新方案",
         "score": "84.43",
-        "rank": 7,
+        "rank": 8,
         "road_show_sort": "9",
         "project_id": "1511",
         "school_id": "2"
@@ -583,7 +593,7 @@
         "school": "徐州医科大学",
         "project": "肺影菌衡——肺结节精准筛诊赋能基层肺健康",
         "score": "83.46",
-        "rank": 8,
+        "rank": 9,
         "road_show_sort": "6",
         "project_id": "1479",
         "school_id": "20"
@@ -593,7 +603,7 @@
         "school": "江苏大学",
         "project": "收稻勤来——打造丘陵机收破局新引擎、重塑粮食减损增收新格局",
         "score": "83.44",
-        "rank": 9,
+        "rank": 10,
         "road_show_sort": "4",
         "project_id": "1513",
         "school_id": "14"
@@ -603,7 +613,7 @@
         "school": "江苏电子信息职业学院",
         "project": "一纸江南 ——苏派剪纸创新传承与乡土文化振兴计划",
         "score": "83.33",
-        "rank": 10,
+        "rank": 11,
         "road_show_sort": "14",
         "project_id": "1539",
         "school_id": "112"
@@ -613,7 +623,7 @@
         "school": "南京航空航天大学",
         "project": "星瞰丰穰——为农业灾害监测装上“智能眼”",
         "score": "83.30",
-        "rank": 11,
+        "rank": 12,
         "road_show_sort": "11",
         "project_id": "1493",
         "school_id": "4"
@@ -623,7 +633,7 @@
         "school": "江苏建筑职业技术大学",
         "project": "防患微燃——小型消防巡检机器人先行者",
         "score": "83.27",
-        "rank": 12,
+        "rank": 13,
         "road_show_sort": "13",
         "project_id": "1543",
         "school_id": "86"
@@ -633,7 +643,7 @@
         "school": "江苏经贸职业技术学院",
         "project": "老佑所依——AI陪伴机器人焕新城乡社区智慧养老",
         "score": "83.21",
-        "rank": 13,
+        "rank": 14,
         "road_show_sort": "8",
         "project_id": "1547",
         "school_id": "93"
@@ -643,7 +653,7 @@
         "school": "南京农业大学",
         "project": "菌衡牧壮——饲草提质菌剂，赋能生态养殖",
         "score": "82.79",
-        "rank": 14,
+        "rank": 15,
         "road_show_sort": "7",
         "project_id": "1512",
         "school_id": "18"
@@ -653,7 +663,7 @@
         "school": "江苏农牧科技职业学院",
         "project": "浩淼智航——以数智赋能，推动水产养殖转型升级",
         "score": "82.49",
-        "rank": 15,
+        "rank": 16,
         "road_show_sort": "10",
         "project_id": "1550",
         "school_id": "113"
@@ -663,7 +673,7 @@
         "school": "徐州工业职业技术学院",
         "project": "云瞰彭城智游七里——沉浸式数字文旅赋能城市更新引领者",
         "score": "81.49",
-        "rank": 16,
+        "rank": 17,
         "road_show_sort": "17",
         "project_id": "1545",
         "school_id": "131"
@@ -673,7 +683,7 @@
         "school": "镇江市高等专科学校",
         "project": "槽创智冷——国内母线槽智能温测一体液冷技术开创者",
         "score": "79.66",
-        "rank": 17,
+        "rank": 18,
         "road_show_sort": "1",
         "project_id": "1546",
         "school_id": "90"
@@ -682,10 +692,20 @@
     "创意3组": [
       {
         "road_show_id": 154,
+        "school": "东南大学",
+        "project": "万纤织就乡水情——引菌回巢化浊为清，做西北净水“守村人”",
+        "score": "90.60",
+        "rank": 1,
+        "road_show_sort": "17",
+        "project_id": "1509",
+        "school_id": "3"
+      },
+      {
+        "road_show_id": 154,
         "school": "扬州大学",
         "project": "田管家—“育-插-管”一体化方案赋能丘陵水稻增产增收",
         "score": "89.43",
-        "rank": 1,
+        "rank": 2,
         "road_show_sort": "3",
         "project_id": "1507",
         "school_id": "36"
@@ -695,7 +715,7 @@
         "school": "南京航空航天大学",
         "project": "精影卫肠——AI乡村肠癌诊断者",
         "score": "89.04",
-        "rank": 2,
+        "rank": 3,
         "road_show_sort": "10",
         "project_id": "1477",
         "school_id": "4"
@@ -705,7 +725,7 @@
         "school": "南京信息工程大学",
         "project": "知时牧草——基于AI与多源数据的人工牧草农业气象解决方案",
         "score": "88.49",
-        "rank": 3,
+        "rank": 4,
         "road_show_sort": "8",
         "project_id": "1504",
         "school_id": "15"
@@ -715,7 +735,7 @@
         "school": "南京林业大学",
         "project": "膜守黄河“几字弯” ——沙漠气候下的生物基沙地专用兴农地膜",
         "score": "87.81",
-        "rank": 4,
+        "rank": 5,
         "road_show_sort": "1",
         "project_id": "1485",
         "school_id": "13"
@@ -725,7 +745,7 @@
         "school": "南京林业大学",
         "project": "聚竹兴乡",
         "score": "87.70",
-        "rank": 5,
+        "rank": 6,
         "road_show_sort": "13",
         "project_id": "1495",
         "school_id": "13"
@@ -735,7 +755,7 @@
         "school": "中国药科大学",
         "project": "滴水识毒—让污水说话，让毒情现形",
         "score": "87.61",
-        "rank": 6,
+        "rank": 7,
         "road_show_sort": "7",
         "project_id": "1487",
         "school_id": "22"
@@ -745,7 +765,7 @@
         "school": "南京邮电大学",
         "project": "龙韵狮风——数智领航的龙狮舞出海新范式",
         "score": "87.26",
-        "rank": 7,
+        "rank": 8,
         "road_show_sort": "6",
         "project_id": "1494",
         "school_id": "10"
@@ -755,7 +775,7 @@
         "school": "江苏农林职业技术学院",
         "project": "蛋鸡福星——做老龄蛋鸡益生菌的开拓者",
         "score": "87.06",
-        "rank": 8,
+        "rank": 9,
         "road_show_sort": "16",
         "project_id": "1548",
         "school_id": "127"
@@ -765,7 +785,7 @@
         "school": "河海大学",
         "project": "融慧灌通——农田灌溉新引擎：智慧决策系统助力高标准农田提质增效",
         "score": "86.74",
-        "rank": 9,
+        "rank": 10,
         "road_show_sort": "4",
         "project_id": "1492",
         "school_id": "11"
@@ -775,7 +795,7 @@
         "school": "常州纺织服装职业技术学院",
         "project": "沐守长者—科技助残赋能城乡社区失能长者尊严助浴服务",
         "score": "86.06",
-        "rank": 10,
+        "rank": 11,
         "road_show_sort": "5",
         "project_id": "1549",
         "school_id": "114"
@@ -785,7 +805,7 @@
         "school": "南京航空航天大学",
         "project": "“镁”利牧场——新型舔砖助力牧民致富新希望",
         "score": "85.41",
-        "rank": 11,
+        "rank": 12,
         "road_show_sort": "12",
         "project_id": "1503",
         "school_id": "4"
@@ -795,7 +815,7 @@
         "school": "南京农业大学",
         "project": "莓满万家——优技赋能的蓝莓新境",
         "score": "84.71",
-        "rank": 12,
+        "rank": 13,
         "road_show_sort": "11",
         "project_id": "1514",
         "school_id": "18"
@@ -805,7 +825,7 @@
         "school": "江苏科技大学",
         "project": "藻福水产 “优藻 · 益菌 · 絮团”守护一尾苗，破解三道关",
         "score": "84.53",
-        "rank": 13,
+        "rank": 14,
         "road_show_sort": "15",
         "project_id": "1500",
         "school_id": "6"
@@ -815,7 +835,7 @@
         "school": "江苏经贸职业技术学院",
         "project": "纤丝绣梦——千年发绣活态传承 东方美学走向世界",
         "score": "84.29",
-        "rank": 14,
+        "rank": 15,
         "road_show_sort": "14",
         "project_id": "1538",
         "school_id": "93"
@@ -825,7 +845,7 @@
         "school": "南京工业职业技术大学",
         "project": "漠上耘车——科技驱动绿进沙退，青年筑梦绿色边疆",
         "score": "83.13",
-        "rank": 15,
+        "rank": 16,
         "road_show_sort": "2",
         "project_id": "1486",
         "school_id": "33"
@@ -835,7 +855,7 @@
         "school": "苏州健雄职业技术学院",
         "project": "智启残岗·政企协同：残疾人高质量就业“人岗智配”服务新范式",
         "score": "79.80",
-        "rank": 16,
+        "rank": 17,
         "road_show_sort": "9",
         "project_id": "1541",
         "school_id": "141"

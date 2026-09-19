@@ -5,7 +5,7 @@
 <!-- SCOREBOARD_START -->
 <div align="center">
 <h2>“建行杯”江苏大学生创新大赛（2026）实时成绩</h2>
-<p>最近一次数据变化：2026-09-19 14:39:06</p>
+<p>最近一次数据变化：2026-09-19 14:50:13</p>
 </div>
 
 <table>
@@ -55,12 +55,12 @@
 <td align="center">89.03</td>
 <td align="center"><strong>第1名</strong></td>
 <td>南京林业大学</td>
-<td>新疆棉杆有点甜</td>
-<td align="center">86.50</td>
+<td>植此青绿</td>
+<td align="center">86.61</td>
 <td align="center"><strong>第1名</strong></td>
-<td>扬州大学</td>
-<td>田管家—“育-插-管”一体化方案赋能丘陵水稻增产增收</td>
-<td align="center">89.43</td>
+<td>东南大学</td>
+<td>万纤织就乡水情——引菌回巢化浊为清，做西北净水“守村人”</td>
+<td align="center">90.60</td>
 <td align="center"><strong>第1名</strong></td>
 </tr>
 <tr>
@@ -76,13 +76,13 @@
 <td>光合零碳——全蒸镀钙钛矿光伏补光一体化智慧农业温室</td>
 <td align="center">88.17</td>
 <td align="center"><strong>第2名</strong></td>
-<td>南京大学</td>
-<td>一“碳”究“净”——助力乡村生态振兴的养殖废水低碳智能一体化治理方案</td>
-<td align="center">86.44</td>
+<td>南京林业大学</td>
+<td>新疆棉杆有点甜</td>
+<td align="center">86.50</td>
 <td align="center"><strong>第2名</strong></td>
-<td>南京航空航天大学</td>
-<td>精影卫肠——AI乡村肠癌诊断者</td>
-<td align="center">89.04</td>
+<td>扬州大学</td>
+<td>田管家—“育-插-管”一体化方案赋能丘陵水稻增产增收</td>
+<td align="center">89.43</td>
 <td align="center"><strong>第2名</strong></td>
 </tr>
 <tr>
@@ -98,13 +98,13 @@
 <td>帧相——AI焕新历史影像，赓续精神血脉</td>
 <td align="center">88.03</td>
 <td align="center"><strong>第3名</strong></td>
-<td>南京师范大学</td>
-<td>苏鲀入粤－－低温全雌河鲀打造苏粤共富新产业</td>
-<td align="center">85.79</td>
+<td>南京大学</td>
+<td>一“碳”究“净”——助力乡村生态振兴的养殖废水低碳智能一体化治理方案</td>
+<td align="center">86.44</td>
 <td align="center"><strong>第3名</strong></td>
-<td>南京信息工程大学</td>
-<td>知时牧草——基于AI与多源数据的人工牧草农业气象解决方案</td>
-<td align="center">88.49</td>
+<td>南京航空航天大学</td>
+<td>精影卫肠——AI乡村肠癌诊断者</td>
+<td align="center">89.04</td>
 <td align="center"><strong>第3名</strong></td>
 </tr>
 <tr>
@@ -120,13 +120,13 @@
 <td>智御冰险——筑牢寒区凌汛安全防线的数智哨兵</td>
 <td align="center">87.64</td>
 <td align="center"><strong>第4名</strong></td>
-<td>南京工业大学</td>
-<td>“点废成金”以微膜靶向堆肥技术筑牢乡村绿色共富路</td>
-<td align="center">85.57</td>
+<td>南京师范大学</td>
+<td>苏鲀入粤－－低温全雌河鲀打造苏粤共富新产业</td>
+<td align="center">85.79</td>
 <td align="center"><strong>第4名</strong></td>
-<td>南京林业大学</td>
-<td>膜守黄河“几字弯” ——沙漠气候下的生物基沙地专用兴农地膜</td>
-<td align="center">87.81</td>
+<td>南京信息工程大学</td>
+<td>知时牧草——基于AI与多源数据的人工牧草农业气象解决方案</td>
+<td align="center">88.49</td>
 <td align="center"><strong>第4名</strong></td>
 </tr>
 <tr>
@@ -142,13 +142,13 @@
 <td>草丰牧兴—沙活素唤醒退化草原 点亮牧民共富路</td>
 <td align="center">87.53</td>
 <td align="center"><strong>第5名</strong></td>
-<td>南京农业大学</td>
-<td>同甘共济——打造凝“芯”聚力致富路</td>
-<td align="center">85.19</td>
+<td>南京工业大学</td>
+<td>“点废成金”以微膜靶向堆肥技术筑牢乡村绿色共富路</td>
+<td align="center">85.57</td>
 <td align="center"><strong>第5名</strong></td>
 <td>南京林业大学</td>
-<td>聚竹兴乡</td>
-<td align="center">87.70</td>
+<td>膜守黄河“几字弯” ——沙漠气候下的生物基沙地专用兴农地膜</td>
+<td align="center">87.81</td>
 <td align="center"><strong>第5名</strong></td>
 </tr>
 <tr>
@@ -164,13 +164,13 @@
 <td>绿色惠农--柔性光伏构建乡村生产新模式</td>
 <td align="center">87.01</td>
 <td align="center"><strong>第6名</strong></td>
-<td>南京理工大学</td>
-<td>炭循新生-以农业固废炭化新模 式，点亮乡村绿色固碳新经济</td>
-<td align="center">84.53</td>
+<td>南京农业大学</td>
+<td>同甘共济——打造凝“芯”聚力致富路</td>
+<td align="center">85.19</td>
 <td align="center"><strong>第6名</strong></td>
-<td>中国药科大学</td>
-<td>滴水识毒—让污水说话，让毒情现形</td>
-<td align="center">87.61</td>
+<td>南京林业大学</td>
+<td>聚竹兴乡</td>
+<td align="center">87.70</td>
 <td align="center"><strong>第6名</strong></td>
 </tr>
 <tr>
@@ -186,13 +186,13 @@
 <td>稻富万家——农机农艺赋能再生稻振兴计划，提质增产助农增收</td>
 <td align="center">86.80</td>
 <td align="center"><strong>第7名</strong></td>
-<td>苏州大学</td>
-<td>融灰成器——沿黄老工业城市粉煤灰治理转型新方案</td>
-<td align="center">84.43</td>
+<td>南京理工大学</td>
+<td>炭循新生-以农业固废炭化新模 式，点亮乡村绿色固碳新经济</td>
+<td align="center">84.53</td>
 <td align="center"><strong>第7名</strong></td>
-<td>南京邮电大学</td>
-<td>龙韵狮风——数智领航的龙狮舞出海新范式</td>
-<td align="center">87.26</td>
+<td>中国药科大学</td>
+<td>滴水识毒—让污水说话，让毒情现形</td>
+<td align="center">87.61</td>
 <td align="center"><strong>第7名</strong></td>
 </tr>
 <tr>
@@ -208,13 +208,13 @@
 <td>识禾穗丰——赋能粮农应对臭氧污染收益保障系统</td>
 <td align="center">86.46</td>
 <td align="center"><strong>第8名</strong></td>
-<td>徐州医科大学</td>
-<td>肺影菌衡——肺结节精准筛诊赋能基层肺健康</td>
-<td align="center">83.46</td>
+<td>苏州大学</td>
+<td>融灰成器——沿黄老工业城市粉煤灰治理转型新方案</td>
+<td align="center">84.43</td>
 <td align="center"><strong>第8名</strong></td>
-<td>江苏农林职业技术学院</td>
-<td>蛋鸡福星——做老龄蛋鸡益生菌的开拓者</td>
-<td align="center">87.06</td>
+<td>南京邮电大学</td>
+<td>龙韵狮风——数智领航的龙狮舞出海新范式</td>
+<td align="center">87.26</td>
 <td align="center"><strong>第8名</strong></td>
 </tr>
 <tr>
@@ -230,13 +230,13 @@
 <td>“瓜”目相看-科技赋能乡村振 兴的甜蜜事业</td>
 <td align="center">85.71</td>
 <td align="center"><strong>第9名</strong></td>
-<td>江苏大学</td>
-<td>收稻勤来——打造丘陵机收破局新引擎、重塑粮食减损增收新格局</td>
-<td align="center">83.44</td>
+<td>徐州医科大学</td>
+<td>肺影菌衡——肺结节精准筛诊赋能基层肺健康</td>
+<td align="center">83.46</td>
 <td align="center"><strong>第9名</strong></td>
-<td>河海大学</td>
-<td>融慧灌通——农田灌溉新引擎：智慧决策系统助力高标准农田提质增效</td>
-<td align="center">86.74</td>
+<td>江苏农林职业技术学院</td>
+<td>蛋鸡福星——做老龄蛋鸡益生菌的开拓者</td>
+<td align="center">87.06</td>
 <td align="center"><strong>第9名</strong></td>
 </tr>
 <tr>
@@ -252,13 +252,13 @@
 <td>乡村鸿雁——合成生物学引领赤霉素GA4国际领先践行农业强国</td>
 <td align="center">85.63</td>
 <td align="center"><strong>第10名</strong></td>
-<td>江苏电子信息职业学院</td>
-<td>一纸江南 ——苏派剪纸创新传承与乡土文化振兴计划</td>
-<td align="center">83.33</td>
+<td>江苏大学</td>
+<td>收稻勤来——打造丘陵机收破局新引擎、重塑粮食减损增收新格局</td>
+<td align="center">83.44</td>
 <td align="center"><strong>第10名</strong></td>
-<td>常州纺织服装职业技术学院</td>
-<td>沐守长者—科技助残赋能城乡社区失能长者尊严助浴服务</td>
-<td align="center">86.06</td>
+<td>河海大学</td>
+<td>融慧灌通——农田灌溉新引擎：智慧决策系统助力高标准农田提质增效</td>
+<td align="center">86.74</td>
 <td align="center"><strong>第10名</strong></td>
 </tr>
 <tr>
@@ -274,13 +274,13 @@
 <td>育优莓，兴万农——以创新有机肥助力蓝莓产业富农兴农</td>
 <td align="center">85.23</td>
 <td align="center"><strong>第11名</strong></td>
-<td>南京航空航天大学</td>
-<td>星瞰丰穰——为农业灾害监测装上“智能眼”</td>
-<td align="center">83.30</td>
+<td>江苏电子信息职业学院</td>
+<td>一纸江南 ——苏派剪纸创新传承与乡土文化振兴计划</td>
+<td align="center">83.33</td>
 <td align="center"><strong>第11名</strong></td>
-<td>南京航空航天大学</td>
-<td>“镁”利牧场——新型舔砖助力牧民致富新希望</td>
-<td align="center">85.41</td>
+<td>常州纺织服装职业技术学院</td>
+<td>沐守长者—科技助残赋能城乡社区失能长者尊严助浴服务</td>
+<td align="center">86.06</td>
 <td align="center"><strong>第11名</strong></td>
 </tr>
 <tr>
@@ -296,13 +296,13 @@
 <td>出漆智胜——高效智能割漆机器人 助力漆农减负与漆产业发展</td>
 <td align="center">85.03</td>
 <td align="center"><strong>第12名</strong></td>
-<td>江苏建筑职业技术大学</td>
-<td>防患微燃——小型消防巡检机器人先行者</td>
-<td align="center">83.27</td>
+<td>南京航空航天大学</td>
+<td>星瞰丰穰——为农业灾害监测装上“智能眼”</td>
+<td align="center">83.30</td>
 <td align="center"><strong>第12名</strong></td>
-<td>南京农业大学</td>
-<td>莓满万家——优技赋能的蓝莓新境</td>
-<td align="center">84.71</td>
+<td>南京航空航天大学</td>
+<td>“镁”利牧场——新型舔砖助力牧民致富新希望</td>
+<td align="center">85.41</td>
 <td align="center"><strong>第12名</strong></td>
 </tr>
 <tr>
@@ -318,13 +318,13 @@
 <td>稻香菇事——轮作兴农乡村振兴力行者</td>
 <td align="center">84.13</td>
 <td align="center"><strong>第13名</strong></td>
-<td>江苏经贸职业技术学院</td>
-<td>老佑所依——AI陪伴机器人焕新城乡社区智慧养老</td>
-<td align="center">83.21</td>
+<td>江苏建筑职业技术大学</td>
+<td>防患微燃——小型消防巡检机器人先行者</td>
+<td align="center">83.27</td>
 <td align="center"><strong>第13名</strong></td>
-<td>江苏科技大学</td>
-<td>藻福水产 “优藻 · 益菌 · 絮团”守护一尾苗，破解三道关</td>
-<td align="center">84.53</td>
+<td>南京农业大学</td>
+<td>莓满万家——优技赋能的蓝莓新境</td>
+<td align="center">84.71</td>
 <td align="center"><strong>第13名</strong></td>
 </tr>
 <tr>
@@ -340,13 +340,13 @@
 <td>瓷琢丹青 传世匠心--国家级非物质文化遗产大丰瓷刻技艺的革新者</td>
 <td align="center">83.53</td>
 <td align="center"><strong>第14名</strong></td>
-<td>南京农业大学</td>
-<td>菌衡牧壮——饲草提质菌剂，赋能生态养殖</td>
-<td align="center">82.79</td>
-<td align="center"><strong>第14名</strong></td>
 <td>江苏经贸职业技术学院</td>
-<td>纤丝绣梦——千年发绣活态传承 东方美学走向世界</td>
-<td align="center">84.29</td>
+<td>老佑所依——AI陪伴机器人焕新城乡社区智慧养老</td>
+<td align="center">83.21</td>
+<td align="center"><strong>第14名</strong></td>
+<td>江苏科技大学</td>
+<td>藻福水产 “优藻 · 益菌 · 絮团”守护一尾苗，破解三道关</td>
+<td align="center">84.53</td>
 <td align="center"><strong>第14名</strong></td>
 </tr>
 <tr>
@@ -362,13 +362,13 @@
 <td>红途戎耀——退役大学生国防教育赋能计划</td>
 <td align="center">83.09</td>
 <td align="center"><strong>第15名</strong></td>
-<td>江苏农牧科技职业学院</td>
-<td>浩淼智航——以数智赋能，推动水产养殖转型升级</td>
-<td align="center">82.49</td>
+<td>南京农业大学</td>
+<td>菌衡牧壮——饲草提质菌剂，赋能生态养殖</td>
+<td align="center">82.79</td>
 <td align="center"><strong>第15名</strong></td>
-<td>南京工业职业技术大学</td>
-<td>漠上耘车——科技驱动绿进沙退，青年筑梦绿色边疆</td>
-<td align="center">83.13</td>
+<td>江苏经贸职业技术学院</td>
+<td>纤丝绣梦——千年发绣活态传承 东方美学走向世界</td>
+<td align="center">84.29</td>
 <td align="center"><strong>第15名</strong></td>
 </tr>
 <tr>
@@ -384,13 +384,13 @@
 <td>忆海拾贝 钿启新航——非遗螺钿的幻彩新生</td>
 <td align="center">82.53</td>
 <td align="center"><strong>第16名</strong></td>
-<td>徐州工业职业技术学院</td>
-<td>云瞰彭城智游七里——沉浸式数字文旅赋能城市更新引领者</td>
-<td align="center">81.49</td>
+<td>江苏农牧科技职业学院</td>
+<td>浩淼智航——以数智赋能，推动水产养殖转型升级</td>
+<td align="center">82.49</td>
 <td align="center"><strong>第16名</strong></td>
-<td>苏州健雄职业技术学院</td>
-<td>智启残岗·政企协同：残疾人高质量就业“人岗智配”服务新范式</td>
-<td align="center">79.80</td>
+<td>南京工业职业技术大学</td>
+<td>漠上耘车——科技驱动绿进沙退，青年筑梦绿色边疆</td>
+<td align="center">83.13</td>
 <td align="center"><strong>第16名</strong></td>
 </tr>
 <tr>
@@ -406,10 +406,32 @@
 <td>光净清源——有机毒害污水激光空化降解缔造者</td>
 <td align="center">82.23</td>
 <td align="center"><strong>第17名</strong></td>
+<td>徐州工业职业技术学院</td>
+<td>云瞰彭城智游七里——沉浸式数字文旅赋能城市更新引领者</td>
+<td align="center">81.49</td>
+<td align="center"><strong>第17名</strong></td>
+<td>苏州健雄职业技术学院</td>
+<td>智启残岗·政企协同：残疾人高质量就业“人岗智配”服务新范式</td>
+<td align="center">79.80</td>
+<td align="center"><strong>第17名</strong></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>镇江市高等专科学校</td>
 <td>槽创智冷——国内母线槽智能温测一体液冷技术开创者</td>
 <td align="center">79.66</td>
-<td align="center"><strong>第17名</strong></td>
+<td align="center"><strong>第18名</strong></td>
 <td></td>
 <td></td>
 <td></td>
