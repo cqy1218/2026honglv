@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19 14:50:13",
+  "updated_at": "2026-09-19 15:25:17",
   "groups": {
     "公益1组": [
       {
@@ -368,10 +368,20 @@
       },
       {
         "road_show_id": 152,
+        "school": "东南大学",
+        "project": "文脉启甦·兴村营城——民族互嵌文化遗产助力城乡融合发展",
+        "score": "87.87",
+        "rank": 4,
+        "road_show_sort": "18",
+        "project_id": "1496",
+        "school_id": "3"
+      },
+      {
+        "road_show_id": 152,
         "school": "河海大学",
         "project": "智御冰险——筑牢寒区凌汛安全防线的数智哨兵",
         "score": "87.64",
-        "rank": 4,
+        "rank": 5,
         "road_show_sort": "16",
         "project_id": "1501",
         "school_id": "11"
@@ -381,7 +391,7 @@
         "school": "南京林业大学",
         "project": "草丰牧兴—沙活素唤醒退化草原 点亮牧民共富路",
         "score": "87.53",
-        "rank": 5,
+        "rank": 6,
         "road_show_sort": "12",
         "project_id": "1497",
         "school_id": "13"
@@ -391,7 +401,7 @@
         "school": "南京航空航天大学",
         "project": "绿色惠农--柔性光伏构建乡村生产新模式",
         "score": "87.01",
-        "rank": 6,
+        "rank": 7,
         "road_show_sort": "13",
         "project_id": "1510",
         "school_id": "4"
@@ -401,7 +411,7 @@
         "school": "江苏大学",
         "project": "稻富万家——农机农艺赋能再生稻振兴计划，提质增产助农增收",
         "score": "86.80",
-        "rank": 7,
+        "rank": 8,
         "road_show_sort": "11",
         "project_id": "1480",
         "school_id": "14"
@@ -411,7 +421,7 @@
         "school": "南京信息工程大学",
         "project": "识禾穗丰——赋能粮农应对臭氧污染收益保障系统",
         "score": "86.46",
-        "rank": 8,
+        "rank": 9,
         "road_show_sort": "15",
         "project_id": "1484",
         "school_id": "15"
@@ -421,7 +431,7 @@
         "school": "江苏食品药品职业技术学院",
         "project": "“瓜”目相看-科技赋能乡村振 兴的甜蜜事业",
         "score": "85.71",
-        "rank": 9,
+        "rank": 10,
         "road_show_sort": "14",
         "project_id": "1542",
         "school_id": "128"
@@ -431,7 +441,7 @@
         "school": "南京师范大学",
         "project": "乡村鸿雁——合成生物学引领赤霉素GA4国际领先践行农业强国",
         "score": "85.63",
-        "rank": 10,
+        "rank": 11,
         "road_show_sort": "8",
         "project_id": "1478",
         "school_id": "23"
@@ -441,7 +451,7 @@
         "school": "南京农业大学",
         "project": "育优莓，兴万农——以创新有机肥助力蓝莓产业富农兴农",
         "score": "85.23",
-        "rank": 11,
+        "rank": 12,
         "road_show_sort": "7",
         "project_id": "1502",
         "school_id": "18"
@@ -451,7 +461,7 @@
         "school": "南京林业大学",
         "project": "出漆智胜——高效智能割漆机器人 助力漆农减负与漆产业发展",
         "score": "85.03",
-        "rank": 12,
+        "rank": 13,
         "road_show_sort": "5",
         "project_id": "1506",
         "school_id": "13"
@@ -461,7 +471,7 @@
         "school": "淮阴师范学院",
         "project": "稻香菇事——轮作兴农乡村振兴力行者",
         "score": "84.13",
-        "rank": 13,
+        "rank": 14,
         "road_show_sort": "10",
         "project_id": "1482",
         "school_id": "25"
@@ -471,7 +481,7 @@
         "school": "盐城工业职业技术学院",
         "project": "瓷琢丹青 传世匠心--国家级非物质文化遗产大丰瓷刻技艺的革新者",
         "score": "83.53",
-        "rank": 14,
+        "rank": 15,
         "road_show_sort": "17",
         "project_id": "1551",
         "school_id": "142"
@@ -481,7 +491,7 @@
         "school": "南京铁道职业技术学院",
         "project": "红途戎耀——退役大学生国防教育赋能计划",
         "score": "83.09",
-        "rank": 15,
+        "rank": 16,
         "road_show_sort": "1",
         "project_id": "1537",
         "school_id": "130"
@@ -491,7 +501,7 @@
         "school": "江苏航运职业技术学院",
         "project": "忆海拾贝 钿启新航——非遗螺钿的幻彩新生",
         "score": "82.53",
-        "rank": 16,
+        "rank": 17,
         "road_show_sort": "3",
         "project_id": "1540",
         "school_id": "110"
@@ -501,7 +511,7 @@
         "school": "江苏工程职业技术学院",
         "project": "光净清源——有机毒害污水激光空化降解缔造者",
         "score": "82.23",
-        "rank": 17,
+        "rank": 18,
         "road_show_sort": "2",
         "project_id": "1544",
         "school_id": "87"
