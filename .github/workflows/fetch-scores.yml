@@ -1,0 +1,104 @@
+name: 自动获取比赛成绩
+
+on:
+
+  # 手动执行
+  workflow_dispatch:
+
+  # 自动定时执行
+  schedule:
+    # 每 10 分钟运行一次
+    - cron: "*/10 * * * *"
+      timezone: "Asia/Shanghai"
+
+
+# 允许 GitHub Actions 自动提交更新后的 CSV
+permissions:
+  contents: write
+
+
+jobs:
+
+  fetch-scores:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ------------------------------------------------------
+      # 1. 获取仓库代码
+      # ------------------------------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # ------------------------------------------------------
+      # 2. 安装 Python
+      # ------------------------------------------------------
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+
+        with:
+          python-version: "3.12"
+
+
+      # ------------------------------------------------------
+      # 3. 安装 requests
+      # ------------------------------------------------------
+
+      - name: Install dependencies
+
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+
+      # ------------------------------------------------------
+      # 4. 抓取五个比赛组数据
+      # ------------------------------------------------------
+
+      - name: Fetch scores
+
+        env:
+          WOCZX_COOKIE: ${{ secrets.WOCZX_COOKIE }}
+          WOCZX_AUTHORIZATION: ${{ secrets.WOCZX_AUTHORIZATION }}
+
+        run: |
+          python fetch_scores.py
+
+
+      # ------------------------------------------------------
+      # 5. 检查成绩有没有发生变化
+      # ------------------------------------------------------
+
+      - name: Check changes
+
+        id: changes
+
+        run: |
+          if [[ -n "$(git status --porcelain data/)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+
+      # ------------------------------------------------------
+      # 6. 如果数据有变化，自动提交
+      # ------------------------------------------------------
+
+      - name: Commit updated scores
+
+        if: steps.changes.outputs.changed == 'true'
+
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/
+
+          git commit -m "Update competition scores"
+
+          git push
