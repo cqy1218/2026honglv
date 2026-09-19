@@ -5,7 +5,7 @@
 <!-- SCOREBOARD_START -->
 <div align="center">
 <h2>“建行杯”江苏大学生创新大赛（2026）实时成绩</h2>
-<p>最近一次成绩变化：2026-09-19 13:30:48</p>
+<p>最近一次成绩变化：2026-09-19 13:45:20</p>
 </div>
 
 <table>
@@ -108,9 +108,9 @@
 <td align="center"><strong>第3名</strong></td>
 </tr>
 <tr>
-<td>河海大学</td>
-<td>智润九曲——借数智慧脑破千库调度难题，引一河清流润泽沿黄万家</td>
-<td align="center">87.49</td>
+<td>扬州大学</td>
+<td>味传四海——以中餐推动中华文化走向世界</td>
+<td align="center">87.64</td>
 <td align="center"><strong>第4名</strong></td>
 <td>南京师范大学</td>
 <td>扣响未来——传承中国女排精神新力量 创领大众排球运动新生态</td>
@@ -130,9 +130,9 @@
 <td align="center"><strong>第4名</strong></td>
 </tr>
 <tr>
-<td>扬州工业职业技术学院</td>
-<td>救·在身边</td>
-<td align="center">86.44</td>
+<td>河海大学</td>
+<td>智润九曲——借数智慧脑破千库调度难题，引一河清流润泽沿黄万家</td>
+<td align="center">87.49</td>
 <td align="center"><strong>第5名</strong></td>
 <td>常州大学</td>
 <td>归途明灯——涉罪青少年矫正与成长引航</td>
@@ -152,9 +152,9 @@
 <td align="center"><strong>第5名</strong></td>
 </tr>
 <tr>
-<td>南京工程学院</td>
-<td>英护安澜——蒲公英公益赋能青少年应急教育向阳而行</td>
-<td align="center">86.37</td>
+<td>扬州工业职业技术学院</td>
+<td>救·在身边</td>
+<td align="center">86.44</td>
 <td align="center"><strong>第6名</strong></td>
 <td>南京理工大学</td>
 <td>永远的丰碑——隐蔽战线英烈档案挖掘、保护与传播</td>
@@ -168,148 +168,170 @@
 <td>智焊无界——大型船舶超厚板智能焊接装备领航者</td>
 <td align="center">85.87</td>
 <td align="center"><strong>第6名</strong></td>
-<td>南京信息工程大学</td>
-<td>光芯智连——新一代AI智算中心光互连集成芯片</td>
-<td align="center">87.09</td>
+<td>苏州工学院</td>
+<td>能级慧算——能碳一体化微电网AI治理平台</td>
+<td align="center">87.37</td>
 <td align="center"><strong>第6名</strong></td>
 </tr>
 <tr>
-<td>江苏航运职业技术学院</td>
-<td>无毒有偶——青少年禁毒公益新生态构建者</td>
-<td align="center">86.27</td>
+<td>南京工程学院</td>
+<td>英护安澜——蒲公英公益赋能青少年应急教育向阳而行</td>
+<td align="center">86.37</td>
 <td align="center"><strong>第7名</strong></td>
 <td>南京航空航天大学</td>
 <td>法润非遗——法治护航非遗文化传承与发展行动</td>
 <td align="center">85.93</td>
 <td align="center"><strong>第7名</strong></td>
-<td>南京师范大学</td>
-<td>乡村鸿雁——合成生物学引领赤霉素GA4国际领先践行农业强国</td>
-<td align="center">85.63</td>
+<td>江苏食品药品职业技术学院</td>
+<td>“瓜”目相看-科技赋能乡村振 兴的甜蜜事业</td>
+<td align="center">85.71</td>
 <td align="center"><strong>第7名</strong></td>
 <td>南京农业大学</td>
 <td>碳寻新剂—国内首创菌渣基药肥一体化肥料添加剂</td>
 <td align="center">85.44</td>
 <td align="center"><strong>第7名</strong></td>
-<td>河海大学</td>
-<td>慧谱清源——水环境高光谱智能监测领航者</td>
-<td align="center">87.07</td>
+<td>南京信息工程大学</td>
+<td>光芯智连——新一代AI智算中心光互连集成芯片</td>
+<td align="center">87.09</td>
 <td align="center"><strong>第7名</strong></td>
 </tr>
 <tr>
-<td>南京航空航天大学</td>
-<td>智育星火—AI赋能新时代青少年国防教育</td>
-<td align="center">86.07</td>
+<td>江苏航运职业技术学院</td>
+<td>无毒有偶——青少年禁毒公益新生态构建者</td>
+<td align="center">86.27</td>
 <td align="center"><strong>第8名</strong></td>
 <td>南京信息工程大学</td>
 <td>工脉铸魂——红色工业文化“三阶”育人推动者</td>
 <td align="center">85.34</td>
 <td align="center"><strong>第8名</strong></td>
-<td>南京农业大学</td>
-<td>育优莓，兴万农——以创新有机肥助力蓝莓产业富农兴农</td>
-<td align="center">85.23</td>
+<td>南京师范大学</td>
+<td>乡村鸿雁——合成生物学引领赤霉素GA4国际领先践行农业强国</td>
+<td align="center">85.63</td>
 <td align="center"><strong>第8名</strong></td>
 <td>苏州工学院</td>
 <td>鉴布如飞—新一代柔性全景自增强织造检测高效随诊师</td>
 <td align="center">84.51</td>
 <td align="center"><strong>第8名</strong></td>
-<td>江苏食品药品职业技术学院</td>
-<td>“臻”芯无虞——超高保真分子诊断预混液国产领航者</td>
-<td align="center">86.04</td>
+<td>河海大学</td>
+<td>慧谱清源——水环境高光谱智能监测领航者</td>
+<td align="center">87.07</td>
 <td align="center"><strong>第8名</strong></td>
 </tr>
 <tr>
-<td>河海大学</td>
-<td>法润电商--法律服务赋能农村电商助力乡村振兴</td>
-<td align="center">85.19</td>
+<td>南京航空航天大学</td>
+<td>智育星火—AI赋能新时代青少年国防教育</td>
+<td align="center">86.07</td>
 <td align="center"><strong>第9名</strong></td>
 <td>宿迁学院</td>
 <td>逐光而行——以京东“阳光天使”为起点的新业态下助残就业新路径</td>
 <td align="center">83.41</td>
 <td align="center"><strong>第9名</strong></td>
-<td>南京林业大学</td>
-<td>出漆智胜——高效智能割漆机器人 助力漆农减负与漆产业发展</td>
-<td align="center">85.03</td>
+<td>南京农业大学</td>
+<td>育优莓，兴万农——以创新有机肥助力蓝莓产业富农兴农</td>
+<td align="center">85.23</td>
 <td align="center"><strong>第9名</strong></td>
 <td>南通大学</td>
 <td>“耦”断“频”安—面向多频段微基站的超小型一体化天线阵列设计方案</td>
 <td align="center">84.06</td>
 <td align="center"><strong>第9名</strong></td>
-<td>常州大学</td>
-<td>智声慧检——用于城镇埋地燃气管道的智能声学内检测器</td>
-<td align="center">84.91</td>
+<td>江苏食品药品职业技术学院</td>
+<td>“臻”芯无虞——超高保真分子诊断预混液国产领航者</td>
+<td align="center">86.04</td>
 <td align="center"><strong>第9名</strong></td>
 </tr>
 <tr>
-<td>苏州大学</td>
-<td>铁军薪火：海外新四军抗战档案抢救整理与红色基因传承新范式</td>
-<td align="center">84.73</td>
+<td>河海大学</td>
+<td>法润电商--法律服务赋能农村电商助力乡村振兴</td>
+<td align="center">85.19</td>
 <td align="center"><strong>第10名</strong></td>
 <td>苏州科技大学</td>
 <td>人间重晚晴——守护生命最后一公里的“尊严”</td>
 <td align="center">83.16</td>
 <td align="center"><strong>第10名</strong></td>
-<td>淮阴师范学院</td>
-<td>稻香菇事——轮作兴农乡村振兴力行者</td>
-<td align="center">84.13</td>
+<td>南京林业大学</td>
+<td>出漆智胜——高效智能割漆机器人 助力漆农减负与漆产业发展</td>
+<td align="center">85.03</td>
 <td align="center"><strong>第10名</strong></td>
 <td>苏州科技大学</td>
 <td>观鱼评水——鱼类智能监测与水体生态健康评价系统</td>
 <td align="center">83.91</td>
 <td align="center"><strong>第10名</strong></td>
-<td>无锡学院</td>
-<td>信安哨兵——地铁插拔式信号设备智能安全预检系统</td>
-<td align="center">84.77</td>
+<td>常州大学</td>
+<td>智声慧检——用于城镇埋地燃气管道的智能声学内检测器</td>
+<td align="center">84.91</td>
 <td align="center"><strong>第10名</strong></td>
 </tr>
 <tr>
-<td>江苏城市职业学院</td>
-<td>有爱无碍，赋能残疾人共享社会发展成果</td>
-<td align="center">83.21</td>
+<td>苏州大学</td>
+<td>铁军薪火：海外新四军抗战档案抢救整理与红色基因传承新范式</td>
+<td align="center">84.73</td>
 <td align="center"><strong>第11名</strong></td>
-<td>南京铁道职业技术学院</td>
-<td>橙光智愿——全国首个铁路志愿全周期赋能学堂</td>
-<td align="center">82.01</td>
+<td>江苏理工学院</td>
+<td>壁上千秋——AI赋能流失海外古壁画“回家”公益行动</td>
+<td align="center">82.66</td>
 <td align="center"><strong>第11名</strong></td>
-<td>南京铁道职业技术学院</td>
-<td>红途戎耀——退役大学生国防教育赋能计划</td>
-<td align="center">83.09</td>
+<td>淮阴师范学院</td>
+<td>稻香菇事——轮作兴农乡村振兴力行者</td>
+<td align="center">84.13</td>
 <td align="center"><strong>第11名</strong></td>
 <td>无锡学院</td>
 <td>慧眼鉴晶-晶圆异常针痕及表面缺陷检测领航者</td>
 <td align="center">83.79</td>
 <td align="center"><strong>第11名</strong></td>
-<td>扬州大学</td>
-<td>藻豆生鲜—新型藻豆复合蛋白基料引领者</td>
-<td align="center">84.27</td>
+<td>无锡学院</td>
+<td>信安哨兵——地铁插拔式信号设备智能安全预检系统</td>
+<td align="center">84.77</td>
 <td align="center"><strong>第11名</strong></td>
 </tr>
 <tr>
+<td>江苏城市职业学院</td>
+<td>有爱无碍，赋能残疾人共享社会发展成果</td>
+<td align="center">83.21</td>
+<td align="center"><strong>第12名</strong></td>
 <td>南京铁道职业技术学院</td>
-<td>铁脉薪传—铁道兵精神传承专列</td>
-<td align="center">82.61</td>
+<td>橙光智愿——全国首个铁路志愿全周期赋能学堂</td>
+<td align="center">82.01</td>
 <td align="center"><strong>第12名</strong></td>
-<td>江苏农牧科技职业学院</td>
-<td>青春π先锋公益——关爱留守儿童，让心不再孤单</td>
-<td align="center">80.84</td>
-<td align="center"><strong>第12名</strong></td>
-<td>江苏航运职业技术学院</td>
-<td>忆海拾贝 钿启新航——非遗螺钿的幻彩新生</td>
-<td align="center">82.53</td>
+<td>南京铁道职业技术学院</td>
+<td>红途戎耀——退役大学生国防教育赋能计划</td>
+<td align="center">83.09</td>
 <td align="center"><strong>第12名</strong></td>
 <td>河海大学</td>
 <td>焕刃新生—盾构刀具再生技术领航者</td>
 <td align="center">83.23</td>
 <td align="center"><strong>第12名</strong></td>
+<td>扬州大学</td>
+<td>藻豆生鲜—新型藻豆复合蛋白基料引领者</td>
+<td align="center">84.27</td>
+<td align="center"><strong>第12名</strong></td>
+</tr>
+<tr>
+<td>南京铁道职业技术学院</td>
+<td>铁脉薪传—铁道兵精神传承专列</td>
+<td align="center">82.61</td>
+<td align="center"><strong>第13名</strong></td>
+<td>江苏农牧科技职业学院</td>
+<td>青春π先锋公益——关爱留守儿童，让心不再孤单</td>
+<td align="center">80.84</td>
+<td align="center"><strong>第13名</strong></td>
+<td>江苏航运职业技术学院</td>
+<td>忆海拾贝 钿启新航——非遗螺钿的幻彩新生</td>
+<td align="center">82.53</td>
+<td align="center"><strong>第13名</strong></td>
+<td>江苏海洋大学</td>
+<td>热控凉方——高集成封装芯片散热用高导热界面材料</td>
+<td align="center">83.00</td>
+<td align="center"><strong>第13名</strong></td>
 <td>徐州工程学院</td>
 <td>深地之眼—隧洞施工多技术融合智能探测模块践行者</td>
 <td align="center">83.39</td>
-<td align="center"><strong>第12名</strong></td>
+<td align="center"><strong>第13名</strong></td>
 </tr>
 <tr>
 <td>苏州健雄职业技术学院</td>
 <td>“骑”心协力“救”在身边——快递外卖从业者急救素养提升公益行动</td>
 <td align="center">80.30</td>
-<td align="center"><strong>第13名</strong></td>
+<td align="center"><strong>第14名</strong></td>
 <td></td>
 <td></td>
 <td></td>
@@ -317,37 +339,15 @@
 <td>江苏工程职业技术学院</td>
 <td>光净清源——有机毒害污水激光空化降解缔造者</td>
 <td align="center">82.23</td>
-<td align="center"><strong>第13名</strong></td>
-<td>江苏海洋大学</td>
-<td>热控凉方——高集成封装芯片散热用高导热界面材料</td>
-<td align="center">83.00</td>
-<td align="center"><strong>第13名</strong></td>
-<td>江苏师范大学</td>
-<td>星驭——面向卫星互联网激光通信的2μm智能化种子源</td>
-<td align="center">82.17</td>
-<td align="center"><strong>第13名</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td align="center"><strong>第14名</strong></td>
 <td>徐州工程学院</td>
 <td>工业智瞳——新时代高水平工业智能装备软件AI测试安全守护者</td>
 <td align="center">82.44</td>
 <td align="center"><strong>第14名</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>江苏师范大学</td>
+<td>星驭——面向卫星互联网激光通信的2μm智能化种子源</td>
+<td align="center">82.17</td>
+<td align="center"><strong>第14名</strong></td>
 </tr>
 <tr>
 <td></td>
