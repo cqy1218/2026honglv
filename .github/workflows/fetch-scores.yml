@@ -1,22 +1,23 @@
 name: 自动更新比赛成绩
 
+run-name: 自动更新成绩 · ${{ github.event_name }}
+
 on:
-  # 支持在 GitHub Actions 页面手动运行
+  # 手动运行
   workflow_dispatch:
 
-  # 每 10 分钟自动检查一次
+  # 每10分钟自动运行一次
+  # 使用 03/13/23/33/43/53 分，尽量避开 GitHub 高负载时段
   schedule:
-    - cron: "*/10 * * * *"
-      timezone: "Asia/Shanghai"
+    - cron: "3/10 * * * *"
 
 
-# 防止两个自动任务同时运行、同时 push
+# 防止两个任务同时修改仓库
 concurrency:
   group: competition-score-update
   cancel-in-progress: true
 
 
-# 允许 GitHub Actions 自动修改仓库文件
 permissions:
   contents: write
 
@@ -28,29 +29,26 @@ jobs:
 
     steps:
 
-      # ======================================================
-      # 1. 获取完整仓库
-      # ======================================================
+      - name: Show trigger information
+        run: |
+          echo "Trigger: ${{ github.event_name }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "SHA: ${{ github.sha }}"
+          echo "UTC time:"
+          date -u
+
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
 
-      # ======================================================
-      # 2. 配置 Python
-      # ======================================================
-
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-
-      # ======================================================
-      # 3. 安装依赖
-      # ======================================================
 
       - name: Install dependencies
         run: |
@@ -58,19 +56,10 @@ jobs:
           pip install -r requirements.txt
 
 
-      # ======================================================
-      # 4. 先同步一次远程 main
-      # 尽量避免本次 Action 基于旧版本运行
-      # ======================================================
-
       - name: Sync latest main
         run: |
           git pull --rebase origin main
 
-
-      # ======================================================
-      # 5. 自动抓取成绩、读取 Excel、生成 README / CSV / JSON
-      # ======================================================
 
       - name: Fetch scores
         env:
@@ -79,10 +68,6 @@ jobs:
         run: |
           python fetch_scores.py
 
-
-      # ======================================================
-      # 6. 检查数据是否发生变化
-      # ======================================================
 
       - name: Check changes
         id: changes
@@ -97,10 +82,6 @@ jobs:
           fi
 
 
-      # ======================================================
-      # 7. 提交并推送最新成绩
-      # ======================================================
-
       - name: Commit updated scores
         if: steps.changes.outputs.changed == 'true'
         shell: bash
@@ -112,8 +93,6 @@ jobs:
 
           git commit -m "Update competition scores"
 
-          # 再次获取远程最新版本
-          # 防止脚本运行期间刚好有人向 main 推送了新提交
           git pull --rebase origin main
 
           git push origin HEAD:main
