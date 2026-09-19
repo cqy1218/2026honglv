@@ -5,7 +5,7 @@
 <!-- SCOREBOARD_START -->
 <div align="center">
 <h2>“建行杯”江苏大学生创新大赛（2026）实时成绩</h2>
-<p>最近一次数据变化：2026-09-19 14:13:49</p>
+<p>最近一次数据变化：2026-09-19 14:39:06</p>
 </div>
 
 <table>
@@ -116,9 +116,9 @@
 <td>电商小先生-为乡村培养留得住、带得动、做得成的青年运营人才</td>
 <td align="center">88.71</td>
 <td align="center"><strong>第4名</strong></td>
-<td>南京林业大学</td>
-<td>草丰牧兴—沙活素唤醒退化草原 点亮牧民共富路</td>
-<td align="center">87.53</td>
+<td>河海大学</td>
+<td>智御冰险——筑牢寒区凌汛安全防线的数智哨兵</td>
+<td align="center">87.64</td>
 <td align="center"><strong>第4名</strong></td>
 <td>南京工业大学</td>
 <td>“点废成金”以微膜靶向堆肥技术筑牢乡村绿色共富路</td>
@@ -138,9 +138,9 @@
 <td>扣响未来——传承中国女排精神新力量 创领大众排球运动新生态</td>
 <td align="center">87.73</td>
 <td align="center"><strong>第5名</strong></td>
-<td>南京航空航天大学</td>
-<td>绿色惠农--柔性光伏构建乡村生产新模式</td>
-<td align="center">87.01</td>
+<td>南京林业大学</td>
+<td>草丰牧兴—沙活素唤醒退化草原 点亮牧民共富路</td>
+<td align="center">87.53</td>
 <td align="center"><strong>第5名</strong></td>
 <td>南京农业大学</td>
 <td>同甘共济——打造凝“芯”聚力致富路</td>
@@ -160,9 +160,9 @@
 <td>归途明灯——涉罪青少年矫正与成长引航</td>
 <td align="center">86.51</td>
 <td align="center"><strong>第6名</strong></td>
-<td>江苏大学</td>
-<td>稻富万家——农机农艺赋能再生稻振兴计划，提质增产助农增收</td>
-<td align="center">86.80</td>
+<td>南京航空航天大学</td>
+<td>绿色惠农--柔性光伏构建乡村生产新模式</td>
+<td align="center">87.01</td>
 <td align="center"><strong>第6名</strong></td>
 <td>南京理工大学</td>
 <td>炭循新生-以农业固废炭化新模 式，点亮乡村绿色固碳新经济</td>
@@ -182,9 +182,9 @@
 <td>“让记忆回家”——两岸共同抗战记忆口述史项目</td>
 <td align="center">85.97</td>
 <td align="center"><strong>第7名</strong></td>
-<td>南京信息工程大学</td>
-<td>识禾穗丰——赋能粮农应对臭氧污染收益保障系统</td>
-<td align="center">86.46</td>
+<td>江苏大学</td>
+<td>稻富万家——农机农艺赋能再生稻振兴计划，提质增产助农增收</td>
+<td align="center">86.80</td>
 <td align="center"><strong>第7名</strong></td>
 <td>苏州大学</td>
 <td>融灰成器——沿黄老工业城市粉煤灰治理转型新方案</td>
@@ -196,198 +196,220 @@
 <td align="center"><strong>第7名</strong></td>
 </tr>
 <tr>
-<td>扬州工业职业技术学院</td>
-<td>救·在身边</td>
-<td align="center">86.44</td>
+<td>南通大学</td>
+<td>翼心衣意——新时代无障碍服饰公益守护者</td>
+<td align="center">86.83</td>
 <td align="center"><strong>第8名</strong></td>
 <td>南京理工大学</td>
 <td>永远的丰碑——隐蔽战线英烈档案挖掘、保护与传播</td>
 <td align="center">85.94</td>
 <td align="center"><strong>第8名</strong></td>
-<td>江苏食品药品职业技术学院</td>
-<td>“瓜”目相看-科技赋能乡村振 兴的甜蜜事业</td>
-<td align="center">85.71</td>
+<td>南京信息工程大学</td>
+<td>识禾穗丰——赋能粮农应对臭氧污染收益保障系统</td>
+<td align="center">86.46</td>
 <td align="center"><strong>第8名</strong></td>
 <td>徐州医科大学</td>
 <td>肺影菌衡——肺结节精准筛诊赋能基层肺健康</td>
 <td align="center">83.46</td>
 <td align="center"><strong>第8名</strong></td>
-<td>河海大学</td>
-<td>融慧灌通——农田灌溉新引擎：智慧决策系统助力高标准农田提质增效</td>
-<td align="center">86.74</td>
+<td>江苏农林职业技术学院</td>
+<td>蛋鸡福星——做老龄蛋鸡益生菌的开拓者</td>
+<td align="center">87.06</td>
 <td align="center"><strong>第8名</strong></td>
 </tr>
 <tr>
-<td>南京工程学院</td>
-<td>英护安澜——蒲公英公益赋能青少年应急教育向阳而行</td>
-<td align="center">86.37</td>
+<td>扬州工业职业技术学院</td>
+<td>救·在身边</td>
+<td align="center">86.44</td>
 <td align="center"><strong>第9名</strong></td>
 <td>南京航空航天大学</td>
 <td>法润非遗——法治护航非遗文化传承与发展行动</td>
 <td align="center">85.93</td>
 <td align="center"><strong>第9名</strong></td>
-<td>南京师范大学</td>
-<td>乡村鸿雁——合成生物学引领赤霉素GA4国际领先践行农业强国</td>
-<td align="center">85.63</td>
+<td>江苏食品药品职业技术学院</td>
+<td>“瓜”目相看-科技赋能乡村振 兴的甜蜜事业</td>
+<td align="center">85.71</td>
 <td align="center"><strong>第9名</strong></td>
 <td>江苏大学</td>
 <td>收稻勤来——打造丘陵机收破局新引擎、重塑粮食减损增收新格局</td>
 <td align="center">83.44</td>
 <td align="center"><strong>第9名</strong></td>
-<td>常州纺织服装职业技术学院</td>
-<td>沐守长者—科技助残赋能城乡社区失能长者尊严助浴服务</td>
-<td align="center">86.06</td>
+<td>河海大学</td>
+<td>融慧灌通——农田灌溉新引擎：智慧决策系统助力高标准农田提质增效</td>
+<td align="center">86.74</td>
 <td align="center"><strong>第9名</strong></td>
 </tr>
 <tr>
-<td>江苏航运职业技术学院</td>
-<td>无毒有偶——青少年禁毒公益新生态构建者</td>
-<td align="center">86.27</td>
+<td>南京工程学院</td>
+<td>英护安澜——蒲公英公益赋能青少年应急教育向阳而行</td>
+<td align="center">86.37</td>
 <td align="center"><strong>第10名</strong></td>
 <td>南京信息工程大学</td>
 <td>工脉铸魂——红色工业文化“三阶”育人推动者</td>
 <td align="center">85.34</td>
 <td align="center"><strong>第10名</strong></td>
-<td>南京农业大学</td>
-<td>育优莓，兴万农——以创新有机肥助力蓝莓产业富农兴农</td>
-<td align="center">85.23</td>
+<td>南京师范大学</td>
+<td>乡村鸿雁——合成生物学引领赤霉素GA4国际领先践行农业强国</td>
+<td align="center">85.63</td>
 <td align="center"><strong>第10名</strong></td>
 <td>江苏电子信息职业学院</td>
 <td>一纸江南 ——苏派剪纸创新传承与乡土文化振兴计划</td>
 <td align="center">83.33</td>
 <td align="center"><strong>第10名</strong></td>
-<td>南京航空航天大学</td>
-<td>“镁”利牧场——新型舔砖助力牧民致富新希望</td>
-<td align="center">85.41</td>
+<td>常州纺织服装职业技术学院</td>
+<td>沐守长者—科技助残赋能城乡社区失能长者尊严助浴服务</td>
+<td align="center">86.06</td>
 <td align="center"><strong>第10名</strong></td>
 </tr>
 <tr>
-<td>南京航空航天大学</td>
-<td>智育星火—AI赋能新时代青少年国防教育</td>
-<td align="center">86.07</td>
+<td>江苏航运职业技术学院</td>
+<td>无毒有偶——青少年禁毒公益新生态构建者</td>
+<td align="center">86.27</td>
 <td align="center"><strong>第11名</strong></td>
 <td>宿迁学院</td>
 <td>逐光而行——以京东“阳光天使”为起点的新业态下助残就业新路径</td>
 <td align="center">83.41</td>
 <td align="center"><strong>第11名</strong></td>
-<td>南京林业大学</td>
-<td>出漆智胜——高效智能割漆机器人 助力漆农减负与漆产业发展</td>
-<td align="center">85.03</td>
+<td>南京农业大学</td>
+<td>育优莓，兴万农——以创新有机肥助力蓝莓产业富农兴农</td>
+<td align="center">85.23</td>
 <td align="center"><strong>第11名</strong></td>
 <td>南京航空航天大学</td>
 <td>星瞰丰穰——为农业灾害监测装上“智能眼”</td>
 <td align="center">83.30</td>
 <td align="center"><strong>第11名</strong></td>
-<td>南京农业大学</td>
-<td>莓满万家——优技赋能的蓝莓新境</td>
-<td align="center">84.71</td>
+<td>南京航空航天大学</td>
+<td>“镁”利牧场——新型舔砖助力牧民致富新希望</td>
+<td align="center">85.41</td>
 <td align="center"><strong>第11名</strong></td>
 </tr>
 <tr>
-<td>河海大学</td>
-<td>法润电商--法律服务赋能农村电商助力乡村振兴</td>
-<td align="center">85.19</td>
+<td>南京航空航天大学</td>
+<td>智育星火—AI赋能新时代青少年国防教育</td>
+<td align="center">86.07</td>
 <td align="center"><strong>第12名</strong></td>
 <td>苏州科技大学</td>
 <td>人间重晚晴——守护生命最后一公里的“尊严”</td>
 <td align="center">83.16</td>
 <td align="center"><strong>第12名</strong></td>
-<td>淮阴师范学院</td>
-<td>稻香菇事——轮作兴农乡村振兴力行者</td>
-<td align="center">84.13</td>
+<td>南京林业大学</td>
+<td>出漆智胜——高效智能割漆机器人 助力漆农减负与漆产业发展</td>
+<td align="center">85.03</td>
 <td align="center"><strong>第12名</strong></td>
 <td>江苏建筑职业技术大学</td>
 <td>防患微燃——小型消防巡检机器人先行者</td>
 <td align="center">83.27</td>
 <td align="center"><strong>第12名</strong></td>
-<td>江苏科技大学</td>
-<td>藻福水产 “优藻 · 益菌 · 絮团”守护一尾苗，破解三道关</td>
-<td align="center">84.53</td>
+<td>南京农业大学</td>
+<td>莓满万家——优技赋能的蓝莓新境</td>
+<td align="center">84.71</td>
 <td align="center"><strong>第12名</strong></td>
 </tr>
 <tr>
-<td>苏州大学</td>
-<td>铁军薪火：海外新四军抗战档案抢救整理与红色基因传承新范式</td>
-<td align="center">84.73</td>
+<td>河海大学</td>
+<td>法润电商--法律服务赋能农村电商助力乡村振兴</td>
+<td align="center">85.19</td>
 <td align="center"><strong>第13名</strong></td>
 <td>江苏理工学院</td>
 <td>壁上千秋——AI赋能流失海外古壁画“回家”公益行动</td>
 <td align="center">82.66</td>
 <td align="center"><strong>第13名</strong></td>
-<td>南京铁道职业技术学院</td>
-<td>红途戎耀——退役大学生国防教育赋能计划</td>
-<td align="center">83.09</td>
+<td>淮阴师范学院</td>
+<td>稻香菇事——轮作兴农乡村振兴力行者</td>
+<td align="center">84.13</td>
 <td align="center"><strong>第13名</strong></td>
 <td>江苏经贸职业技术学院</td>
 <td>老佑所依——AI陪伴机器人焕新城乡社区智慧养老</td>
 <td align="center">83.21</td>
 <td align="center"><strong>第13名</strong></td>
-<td>江苏经贸职业技术学院</td>
-<td>纤丝绣梦——千年发绣活态传承 东方美学走向世界</td>
-<td align="center">84.29</td>
+<td>江苏科技大学</td>
+<td>藻福水产 “优藻 · 益菌 · 絮团”守护一尾苗，破解三道关</td>
+<td align="center">84.53</td>
 <td align="center"><strong>第13名</strong></td>
 </tr>
 <tr>
-<td>江苏城市职业学院</td>
-<td>有爱无碍，赋能残疾人共享社会发展成果</td>
-<td align="center">83.21</td>
+<td>苏州大学</td>
+<td>铁军薪火：海外新四军抗战档案抢救整理与红色基因传承新范式</td>
+<td align="center">84.73</td>
 <td align="center"><strong>第14名</strong></td>
 <td>南京铁道职业技术学院</td>
 <td>橙光智愿——全国首个铁路志愿全周期赋能学堂</td>
 <td align="center">82.01</td>
 <td align="center"><strong>第14名</strong></td>
-<td>江苏航运职业技术学院</td>
-<td>忆海拾贝 钿启新航——非遗螺钿的幻彩新生</td>
-<td align="center">82.53</td>
+<td>盐城工业职业技术学院</td>
+<td>瓷琢丹青 传世匠心--国家级非物质文化遗产大丰瓷刻技艺的革新者</td>
+<td align="center">83.53</td>
 <td align="center"><strong>第14名</strong></td>
 <td>南京农业大学</td>
 <td>菌衡牧壮——饲草提质菌剂，赋能生态养殖</td>
 <td align="center">82.79</td>
 <td align="center"><strong>第14名</strong></td>
-<td>南京工业职业技术大学</td>
-<td>漠上耘车——科技驱动绿进沙退，青年筑梦绿色边疆</td>
-<td align="center">83.13</td>
+<td>江苏经贸职业技术学院</td>
+<td>纤丝绣梦——千年发绣活态传承 东方美学走向世界</td>
+<td align="center">84.29</td>
 <td align="center"><strong>第14名</strong></td>
 </tr>
 <tr>
-<td>南京铁道职业技术学院</td>
-<td>铁脉薪传—铁道兵精神传承专列</td>
-<td align="center">82.61</td>
+<td>江苏城市职业学院</td>
+<td>有爱无碍，赋能残疾人共享社会发展成果</td>
+<td align="center">83.21</td>
 <td align="center"><strong>第15名</strong></td>
 <td>江苏农牧科技职业学院</td>
 <td>青春π先锋公益——关爱留守儿童，让心不再孤单</td>
 <td align="center">80.84</td>
 <td align="center"><strong>第15名</strong></td>
-<td>江苏工程职业技术学院</td>
-<td>光净清源——有机毒害污水激光空化降解缔造者</td>
-<td align="center">82.23</td>
+<td>南京铁道职业技术学院</td>
+<td>红途戎耀——退役大学生国防教育赋能计划</td>
+<td align="center">83.09</td>
 <td align="center"><strong>第15名</strong></td>
 <td>江苏农牧科技职业学院</td>
 <td>浩淼智航——以数智赋能，推动水产养殖转型升级</td>
 <td align="center">82.49</td>
 <td align="center"><strong>第15名</strong></td>
+<td>南京工业职业技术大学</td>
+<td>漠上耘车——科技驱动绿进沙退，青年筑梦绿色边疆</td>
+<td align="center">83.13</td>
+<td align="center"><strong>第15名</strong></td>
+</tr>
+<tr>
+<td>南京铁道职业技术学院</td>
+<td>铁脉薪传—铁道兵精神传承专列</td>
+<td align="center">82.61</td>
+<td align="center"><strong>第16名</strong></td>
+<td>江苏财经职业技术学院</td>
+<td>“援”缘不断——AI赋能大学生法律援藏</td>
+<td align="center">80.81</td>
+<td align="center"><strong>第16名</strong></td>
+<td>江苏航运职业技术学院</td>
+<td>忆海拾贝 钿启新航——非遗螺钿的幻彩新生</td>
+<td align="center">82.53</td>
+<td align="center"><strong>第16名</strong></td>
+<td>徐州工业职业技术学院</td>
+<td>云瞰彭城智游七里——沉浸式数字文旅赋能城市更新引领者</td>
+<td align="center">81.49</td>
+<td align="center"><strong>第16名</strong></td>
 <td>苏州健雄职业技术学院</td>
 <td>智启残岗·政企协同：残疾人高质量就业“人岗智配”服务新范式</td>
 <td align="center">79.80</td>
-<td align="center"><strong>第15名</strong></td>
+<td align="center"><strong>第16名</strong></td>
 </tr>
 <tr>
 <td>苏州健雄职业技术学院</td>
 <td>“骑”心协力“救”在身边——快递外卖从业者急救素养提升公益行动</td>
 <td align="center">80.30</td>
-<td align="center"><strong>第16名</strong></td>
+<td align="center"><strong>第17名</strong></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>江苏工程职业技术学院</td>
+<td>光净清源——有机毒害污水激光空化降解缔造者</td>
+<td align="center">82.23</td>
+<td align="center"><strong>第17名</strong></td>
 <td>镇江市高等专科学校</td>
 <td>槽创智冷——国内母线槽智能温测一体液冷技术开创者</td>
 <td align="center">79.66</td>
-<td align="center"><strong>第16名</strong></td>
+<td align="center"><strong>第17名</strong></td>
 <td></td>
 <td></td>
 <td></td>
