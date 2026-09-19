@@ -1,12 +1,20 @@
 {
-  "updated_at": "2026-09-19 13:20:16",
+  "updated_at": "2026-09-19 13:30:48",
   "groups": {
     "公益1组": [
+      {
+        "school": "南京大学",
+        "project": "心安吾港——三维协同赋能香港青少年中华文化认同引领者",
+        "score": "90.71",
+        "rank": 1,
+        "road_show_sort": "13",
+        "project_id": "1471"
+      },
       {
         "school": "南京工业大学",
         "project": "垒球冠军计划—青少年垒球运动公益推广的引领者",
         "score": "89.60",
-        "rank": 1,
+        "rank": 2,
         "road_show_sort": "9",
         "project_id": "1472"
       },
@@ -14,7 +22,7 @@
         "school": "南京工业职业技术大学",
         "project": "铭记你的名字——助力烈士“回家”新标杆",
         "score": "88.63",
-        "rank": 2,
+        "rank": 3,
         "road_show_sort": "3",
         "project_id": "1529"
       },
@@ -22,7 +30,7 @@
         "school": "河海大学",
         "project": "智润九曲——借数智慧脑破千库调度难题，引一河清流润泽沿黄万家",
         "score": "87.49",
-        "rank": 3,
+        "rank": 4,
         "road_show_sort": "8",
         "project_id": "1467"
       },
@@ -30,7 +38,7 @@
         "school": "扬州工业职业技术学院",
         "project": "救·在身边",
         "score": "86.44",
-        "rank": 4,
+        "rank": 5,
         "road_show_sort": "1",
         "project_id": "1533"
       },
@@ -38,7 +46,7 @@
         "school": "南京工程学院",
         "project": "英护安澜——蒲公英公益赋能青少年应急教育向阳而行",
         "score": "86.37",
-        "rank": 5,
+        "rank": 6,
         "road_show_sort": "12",
         "project_id": "1461"
       },
@@ -46,7 +54,7 @@
         "school": "江苏航运职业技术学院",
         "project": "无毒有偶——青少年禁毒公益新生态构建者",
         "score": "86.27",
-        "rank": 6,
+        "rank": 7,
         "road_show_sort": "4",
         "project_id": "1532"
       },
@@ -54,7 +62,7 @@
         "school": "南京航空航天大学",
         "project": "智育星火—AI赋能新时代青少年国防教育",
         "score": "86.07",
-        "rank": 7,
+        "rank": 8,
         "road_show_sort": "7",
         "project_id": "1473"
       },
@@ -62,7 +70,7 @@
         "school": "河海大学",
         "project": "法润电商--法律服务赋能农村电商助力乡村振兴",
         "score": "85.19",
-        "rank": 8,
+        "rank": 9,
         "road_show_sort": "10",
         "project_id": "1470"
       },
@@ -70,7 +78,7 @@
         "school": "苏州大学",
         "project": "铁军薪火：海外新四军抗战档案抢救整理与红色基因传承新范式",
         "score": "84.73",
-        "rank": 9,
+        "rank": 10,
         "road_show_sort": "11",
         "project_id": "1476"
       },
@@ -78,7 +86,7 @@
         "school": "江苏城市职业学院",
         "project": "有爱无碍，赋能残疾人共享社会发展成果",
         "score": "83.21",
-        "rank": 10,
+        "rank": 11,
         "road_show_sort": "6",
         "project_id": "1534"
       },
@@ -86,7 +94,7 @@
         "school": "南京铁道职业技术学院",
         "project": "铁脉薪传—铁道兵精神传承专列",
         "score": "82.61",
-        "rank": 11,
+        "rank": 12,
         "road_show_sort": "5",
         "project_id": "1531"
       },
@@ -94,7 +102,7 @@
         "school": "苏州健雄职业技术学院",
         "project": "“骑”心协力“救”在身边——快递外卖从业者急救素养提升公益行动",
         "score": "80.30",
-        "rank": 12,
+        "rank": 13,
         "road_show_sort": "2",
         "project_id": "1536"
       }
@@ -231,10 +239,18 @@
         "project_id": "1497"
       },
       {
+        "school": "南京航空航天大学",
+        "project": "绿色惠农--柔性光伏构建乡村生产新模式",
+        "score": "87.01",
+        "rank": 5,
+        "road_show_sort": "13",
+        "project_id": "1510"
+      },
+      {
         "school": "江苏大学",
         "project": "稻富万家——农机农艺赋能再生稻振兴计划，提质增产助农增收",
         "score": "86.80",
-        "rank": 5,
+        "rank": 6,
         "road_show_sort": "11",
         "project_id": "1480"
       },
@@ -242,7 +258,7 @@
         "school": "南京师范大学",
         "project": "乡村鸿雁——合成生物学引领赤霉素GA4国际领先践行农业强国",
         "score": "85.63",
-        "rank": 6,
+        "rank": 7,
         "road_show_sort": "8",
         "project_id": "1478"
       },
@@ -250,7 +266,7 @@
         "school": "南京农业大学",
         "project": "育优莓，兴万农——以创新有机肥助力蓝莓产业富农兴农",
         "score": "85.23",
-        "rank": 7,
+        "rank": 8,
         "road_show_sort": "7",
         "project_id": "1502"
       },
@@ -258,7 +274,7 @@
         "school": "南京林业大学",
         "project": "出漆智胜——高效智能割漆机器人 助力漆农减负与漆产业发展",
         "score": "85.03",
-        "rank": 8,
+        "rank": 9,
         "road_show_sort": "5",
         "project_id": "1506"
       },
@@ -266,7 +282,7 @@
         "school": "淮阴师范学院",
         "project": "稻香菇事——轮作兴农乡村振兴力行者",
         "score": "84.13",
-        "rank": 9,
+        "rank": 10,
         "road_show_sort": "10",
         "project_id": "1482"
       },
@@ -274,7 +290,7 @@
         "school": "南京铁道职业技术学院",
         "project": "红途戎耀——退役大学生国防教育赋能计划",
         "score": "83.09",
-        "rank": 10,
+        "rank": 11,
         "road_show_sort": "1",
         "project_id": "1537"
       },
@@ -282,7 +298,7 @@
         "school": "江苏航运职业技术学院",
         "project": "忆海拾贝 钿启新航——非遗螺钿的幻彩新生",
         "score": "82.53",
-        "rank": 11,
+        "rank": 12,
         "road_show_sort": "3",
         "project_id": "1540"
       },
@@ -290,7 +306,7 @@
         "school": "江苏工程职业技术学院",
         "project": "光净清源——有机毒害污水激光空化降解缔造者",
         "score": "82.23",
-        "rank": 12,
+        "rank": 13,
         "road_show_sort": "2",
         "project_id": "1544"
       }
@@ -361,10 +377,18 @@
         "project_id": "1180"
       },
       {
+        "school": "南通大学",
+        "project": "“耦”断“频”安—面向多频段微基站的超小型一体化天线阵列设计方案",
+        "score": "84.06",
+        "rank": 9,
+        "road_show_sort": "15",
+        "project_id": "1305"
+      },
+      {
         "school": "苏州科技大学",
         "project": "观鱼评水——鱼类智能监测与水体生态健康评价系统",
         "score": "83.91",
-        "rank": 9,
+        "rank": 10,
         "road_show_sort": "13",
         "project_id": "1229"
       },
@@ -372,7 +396,7 @@
         "school": "无锡学院",
         "project": "慧眼鉴晶-晶圆异常针痕及表面缺陷检测领航者",
         "score": "83.79",
-        "rank": 10,
+        "rank": 11,
         "road_show_sort": "2",
         "project_id": "1268"
       },
@@ -380,7 +404,7 @@
         "school": "河海大学",
         "project": "焕刃新生—盾构刀具再生技术领航者",
         "score": "83.23",
-        "rank": 11,
+        "rank": 12,
         "road_show_sort": "14",
         "project_id": "1214"
       },
@@ -388,7 +412,7 @@
         "school": "江苏海洋大学",
         "project": "热控凉方——高集成封装芯片散热用高导热界面材料",
         "score": "83.00",
-        "rank": 12,
+        "rank": 13,
         "road_show_sort": "3",
         "project_id": "1267"
       },
@@ -396,7 +420,7 @@
         "school": "徐州工程学院",
         "project": "工业智瞳——新时代高水平工业智能装备软件AI测试安全守护者",
         "score": "82.44",
-        "rank": 13,
+        "rank": 14,
         "road_show_sort": "11",
         "project_id": "1162"
       },
@@ -404,17 +428,25 @@
         "school": "苏州工学院",
         "project": "创芯速鉴-高标准快检护航果蔬无忧出海",
         "score": "81.77",
-        "rank": 14,
+        "rank": 15,
         "road_show_sort": "8",
         "project_id": "1254"
       }
     ],
     "创意3组": [
       {
+        "school": "南京航空航天大学",
+        "project": "光极曜源——引领工业CT成像革命的光阴极X射线管",
+        "score": "89.17",
+        "rank": 1,
+        "road_show_sort": "13",
+        "project_id": "1287"
+      },
+      {
         "school": "苏州工学院",
         "project": "鳞烯双致——石墨烯/玻璃鳞片协同长效海洋防腐涂层创新者",
         "score": "89.09",
-        "rank": 1,
+        "rank": 2,
         "road_show_sort": "7",
         "project_id": "1182"
       },
@@ -422,7 +454,7 @@
         "school": "南京林业大学",
         "project": "见微知竹-打破高端垄断的绿色竹基微晶纤维素",
         "score": "88.81",
-        "rank": 2,
+        "rank": 3,
         "road_show_sort": "4",
         "project_id": "1203"
       },
@@ -430,7 +462,7 @@
         "school": "南京医科大学",
         "project": "丹芯——耐药菌快速药敏数字芯片领航者",
         "score": "88.00",
-        "rank": 3,
+        "rank": 4,
         "road_show_sort": "8",
         "project_id": "1242"
       },
@@ -438,7 +470,7 @@
         "school": "东南大学",
         "project": "天迅——百G极速全天候共生通信系统",
         "score": "87.90",
-        "rank": 4,
+        "rank": 5,
         "road_show_sort": "12",
         "project_id": "1264"
       },
@@ -446,7 +478,7 @@
         "school": "南京信息工程大学",
         "project": "光芯智连——新一代AI智算中心光互连集成芯片",
         "score": "87.09",
-        "rank": 5,
+        "rank": 6,
         "road_show_sort": "11",
         "project_id": "1171"
       },
@@ -454,7 +486,7 @@
         "school": "河海大学",
         "project": "慧谱清源——水环境高光谱智能监测领航者",
         "score": "87.07",
-        "rank": 6,
+        "rank": 7,
         "road_show_sort": "1",
         "project_id": "1238"
       },
@@ -462,7 +494,7 @@
         "school": "江苏食品药品职业技术学院",
         "project": "“臻”芯无虞——超高保真分子诊断预混液国产领航者",
         "score": "86.04",
-        "rank": 7,
+        "rank": 8,
         "road_show_sort": "10",
         "project_id": "1271"
       },
@@ -470,7 +502,7 @@
         "school": "常州大学",
         "project": "智声慧检——用于城镇埋地燃气管道的智能声学内检测器",
         "score": "84.91",
-        "rank": 8,
+        "rank": 9,
         "road_show_sort": "9",
         "project_id": "1272"
       },
@@ -478,7 +510,7 @@
         "school": "无锡学院",
         "project": "信安哨兵——地铁插拔式信号设备智能安全预检系统",
         "score": "84.77",
-        "rank": 9,
+        "rank": 10,
         "road_show_sort": "5",
         "project_id": "1308"
       },
@@ -486,7 +518,7 @@
         "school": "扬州大学",
         "project": "藻豆生鲜—新型藻豆复合蛋白基料引领者",
         "score": "84.27",
-        "rank": 10,
+        "rank": 11,
         "road_show_sort": "6",
         "project_id": "1166"
       },
@@ -494,7 +526,7 @@
         "school": "徐州工程学院",
         "project": "深地之眼—隧洞施工多技术融合智能探测模块践行者",
         "score": "83.39",
-        "rank": 11,
+        "rank": 12,
         "road_show_sort": "2",
         "project_id": "1191"
       },
@@ -502,7 +534,7 @@
         "school": "江苏师范大学",
         "project": "星驭——面向卫星互联网激光通信的2μm智能化种子源",
         "score": "82.17",
-        "rank": 12,
+        "rank": 13,
         "road_show_sort": "3",
         "project_id": "1163"
       }
